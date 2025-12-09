@@ -1,7 +1,7 @@
 # Markdown Authoring Standards
 
 **Version**: 1.0  
-**Last Updated**: November 6, 2025
+**Last Updated**: December 2025
 
 ---
 
@@ -36,119 +36,78 @@ Supported languages: `text`, `mermaid`, `bash`, `powershell`, `json`, `yaml`, `p
 
 ---
 
-## 🔍 YAML Frontmatter Validation (CRITICAL)
+## 📋 Session Documentation Structure
 
 ### Required Structure
 
-All educational content files MUST have valid YAML frontmatter with proper structure:
+All session documentation files should follow this structure:
 
-```yaml
+```markdown
+# Session {N}: {Title}
+
+**Duration:** 30 minutes  
+**Type:** 📚 Knowledge  
+**Level:** {Level Name}
+
 ---
-learning_level: "Beginner" | "Intermediate" | "Advanced"
-prerequisites: ["required knowledge", "prior concepts"]
-estimated_time: "25 minutes"
-learning_objectives:
-  - "Specific, measurable outcome 1"
-  - "Specific, measurable outcome 2"
-related_topics:
-  prerequisites: []
-  builds_upon: []
-  enables:
-    - 01_Next-File.md
-    - 02_Another-File.md
-  cross_refs: []
+
+## 🎯 Session Overview & Agenda
+
+### What You'll Learn:
+- ✅ Learning objective 1
+- ✅ Learning objective 2
+
+### Session Flow:
+| Part | Activity | Description |
+| ---- | -------- | ----------- |
+| 1    | ...      | ...         |
+
 ---
+
+## 📋 Before You Begin
+
+### Prerequisites:
+✅ Prerequisite 1  
+✅ Prerequisite 2
+
+---
+
+## 💻 Part 1: {Section Title}
+
+[Content sections...]
+
+---
+
+## 🚀 Part N: Hands-on Practice
+
+### Practice Files:
+🧪 *Practice Files*:  
+`src/L1/S1/01_hello.py`, `src/L1/S1/02_interactive_hello.py`
+
+---
+
+## 📝 Key Takeaways
+
+[Summary...]
+
+---
+
+## 🔧 Troubleshooting
+
+[Common issues...]
 ```
 
-### Common Pitfalls & Prevention
+### Structure Checklist
 
-#### ❌ **CRITICAL ERROR: Template Placeholder Corruption**
+Before finalizing session documentation:
 
-**Problem Pattern:**
-
-```yaml
-# WRONG - Missing 'enables:' key and placeholder not replaced
-  $101_Next-File.md
-    - 02_Another-File.md
-```
-
-**Root Cause:**
-
-- Template placeholders like `$101_`, `$102_`, `$103_` were used but never replaced
-- Missing `enables:` key in `related_topics` section
-- Placeholder pattern `$10X_` indicates template variable that wasn't substituted
-
-**Correct Format:**
-
-```yaml
-# CORRECT - Proper YAML structure
-related_topics:
-  enables:
-    - 01_Next-File.md
-    - 02_Another-File.md
-```
-
-#### Prevention Checklist
-
-Before creating or modifying YAML frontmatter:
-
-1. ✅ **Always include `enables:` key** in `related_topics` section
-2. ✅ **Never use placeholder patterns** like `$101_`, `$102_`, `$103_` in final files
-3. ✅ **Replace all template variables** before saving files
-4. ✅ **Validate YAML syntax** - ensure proper indentation and list format
-5. ✅ **Use proper list format** - all items under `enables:` must start with `-`
-6. ✅ **File prefixes must match** - `01_`, `02_`, `03_` not `$101_`, `$102_`, `$103_`
-
-#### Validation Rules
-
-**Required Keys:**
-
-- `learning_level` - Must be present
-- `prerequisites` - Must be present (can be empty array)
-- `estimated_time` - Must be present
-- `learning_objectives` - Must be present (array with at least one item)
-- `related_topics` - Must be present with sub-keys:
-  - `prerequisites` - Array (can be empty)
-  - `builds_upon` - Array (can be empty)
-  - `enables` - Array (can be empty, but key must exist)
-  - `cross_refs` - Array (can be empty)
-
-**Forbidden Patterns:**
-
-- ❌ `$10X_` - Template placeholder pattern (must be replaced)
-- ❌ Missing `enables:` key in `related_topics`
-- ❌ Top-level list items without parent key
-- ❌ Inconsistent indentation (must use 2 spaces)
-
-#### Automated Validation
-
-Run validation scripts before committing:
-
-- `.\tools\psscripts\Review-EducationalContent.ps1` - Checks metadata compliance
-- `.\tools\psscripts\Comprehensive-WorkspaceReview.ps1` - Full workspace validation
-- `.\tools\psscripts\Validate-FileReferences.ps1` - Validates all file references
-
-#### Example of Correct Structure
-
-```yaml
----
-learning_level: "Beginner"
-prerequisites: ["Basic programming knowledge"]
-estimated_time: "25 minutes"
-learning_objectives:
-  - "Understand core concepts"
-  - "Apply principles in practice"
-related_topics:
-  prerequisites: []
-  builds_upon: []
-  enables:
-    - 01_Next-Topic-Part1.md
-    - 01_Next-Topic-Part2.md
-    - 02_Advanced-Topic.md
-  cross_refs:
-    - ../../02_AI-and-ML/
----
-```
+1. ✅ **Session Overview** - Duration, type, level clearly stated
+2. ✅ **Learning Objectives** - Clear, specific, measurable outcomes
+3. ✅ **Prerequisites** - What's needed before starting
+4. ✅ **Content Sections** - Progressive learning steps
+5. ✅ **Practice Files** - References to source code
+6. ✅ **Key Takeaways** - Summary of concepts
+7. ✅ **Troubleshooting** - Common issues and solutions (if applicable)
 
 ---
 
@@ -156,165 +115,132 @@ related_topics:
 
 ### Required Practices
 
-**CRITICAL**: All file references in YAML frontmatter and markdown content MUST point to existing files.
+**CRITICAL**: All file references in markdown content MUST point to existing files.
 
 ### Common Broken Reference Patterns
 
-#### ❌ **ERROR: Missing Part Suffixes**
+#### ❌ **ERROR: Incorrect Path Format**
 
 **Problem Pattern:**
 
-```yaml
-# WRONG - File doesn't exist
-prerequisites:
-  - 01_OOP-Introduction-Part1.md
+```markdown
+# WRONG - Incorrect path format
+[Session 1](docs/sessions/S1.md)
+[Practice File](src/S1/01_hello.py)
 ```
 
 **Root Cause:**
 
-- Files were split into multiple parts (e.g., `-Part1-A.md`, `-Part1-B.md`)
-- References were not updated to match actual file names
-- Splitting process created new files but didn't update all references
+- Missing level identifier in path
+- Not using `L{level}/S{session}/` directory structure
+- Paths don't match actual repository structure
 
 **Correct Format:**
 
-```yaml
-# CORRECT - References actual file (using simplified naming)
-prerequisites:
-  - 01_OOP-Introduction-Part1-A.md
+```markdown
+# CORRECT - Proper path format
+[Session 1](docs/sessions/L1/S1.md)
+[Practice File](src/L1/S1/01_hello.py)
 ```
 
-#### ❌ **ERROR: Non-Existent Part Files**
+#### ❌ **ERROR: Non-Existent Files**
 
 **Problem Pattern:**
 
-```yaml
-# WRONG - Part2.md doesn't exist, only Part2-A.md exists
-enables:
-  - 03_Encapsulation-Part2.md
+```markdown
+# WRONG - File doesn't exist
+🧪 *Practice Files*:  
+`src/L1/S1/03_advanced.py`
 ```
 
 **Root Cause:**
 
-- Files were split multiple times creating nested part structures
-- References use simplified names that don't match actual file structure
+- File was renamed or doesn't exist
+- Reference uses wrong filename
 - Need to check actual file names before referencing
 
 **Correct Format:**
 
-```yaml
-# CORRECT - References actual file (using simplified naming)
-enables:
-  - 03_Encapsulation-Part2-A.md
-```
-
-#### ❌ **ERROR: Generic Part References**
-
-**Problem Pattern:**
-
-```yaml
-# WRONG - Which part file?
-prerequisites:
-  - 02_Classes-and-Objects-Part1.md
-```
-
-**Root Cause:**
-
-- Files split into multiple parts but reference uses generic name
-- Need to specify exact part file or use appropriate default
-
-**Correct Format:**
-
-```yaml
-# CORRECT - Specific part file (using simplified naming)
-prerequisites:
-  - 02_Classes-and-Objects-Part1-A.md
-  # OR if referencing the concept generally, use first part (Part1-A)
+```markdown
+# CORRECT - References actual file
+🧪 *Practice Files*:  
+`src/L1/S1/01_hello.py`, `src/L1/S1/02_interactive_hello.py`
 ```
 
 ### File Reference Rules
 
 1. ✅ **Always verify file exists** before adding reference
 2. ✅ **Use exact file names** - match actual file names exactly
-3. ✅ **Check for part suffixes** - if file was split, use full name with all part suffixes
-4. ✅ **Test references** - run validation script after adding references
-5. ✅ **Update all references** - when splitting files, update ALL references to that file
+3. ✅ **Use correct paths** - `src/L{level}/S{session}/` and `docs/sessions/L{level}/`
+4. ✅ **Test references** - verify all links work in markdown preview
+5. ✅ **Update all references** - when renaming/moving files, update ALL references immediately
 6. ✅ **Use relative paths correctly** - ensure paths resolve from current file location
 
 ### Reference Patterns
 
-**When referencing split files:**
+**When referencing practice files:**
 
-- **Prerequisites/Builds Upon**: Use first part (`-Part1-A.md`) or specific part if needed
-- **Enables**: Can reference any part, but typically first part (`-Part1-A.md`) or next part in sequence
-- **Cross-References**: Can reference directories or specific files
+```markdown
+🧪 *Practice Files*:  
+`src/L1/S1/01_hello.py`, `src/L1/S1/02_interactive_hello.py`
+```
 
-**Naming Convention**: Split files use simplified letter suffixes:
-- `Topic-Part1-Part1.md` → `Topic-Part1-A.md`
-- `Topic-Part1-Part2.md` → `Topic-Part1-B.md`
-- `Topic-Part2-Part1.md` → `Topic-Part2-A.md`
+**When referencing session documentation:**
 
-**Example:**
+```markdown
+[Session 1](docs/sessions/L1/S1.md)
+[Level 1 Plan](docs/sessions/L1/Plan.md)
+```
 
-```yaml
-related_topics:
-  prerequisites:
-    - 01_OOP-Introduction-Part1-A.md  # First part
-  builds_upon:
-    - 01_OOP-Introduction-Part1-A.md  # First part
-  enables:
-    - 01_OOP-Introduction-Part1-B.md  # Next part
-    - 02_Classes-and-Objects-Part1-A.md  # Next topic, first part
+**When referencing images:**
+
+```markdown
+![Help System](../../images/S1/Help_V1.PNG)
 ```
 
 ### Validation Checklist
 
 Before committing any file with references:
 
-1. ✅ **Run validation script**: `.\tools\psscripts\Validate-FileReferences.ps1`
-2. ✅ **Check file exists**: Verify each referenced file exists in the expected location
-3. ✅ **Test navigation**: Click links in markdown preview to verify they work
-4. ✅ **Update after splitting**: If you split a file, update ALL references to that file
-5. ✅ **Use correct paths**: Relative paths must resolve from current file's directory
+1. ✅ **Check file exists**: Verify each referenced file exists in the expected location
+2. ✅ **Test navigation**: Click links in markdown preview to verify they work
+3. ✅ **Update after changes**: If you rename/move files, update ALL references immediately
+4. ✅ **Use correct paths**: Relative paths must resolve from current file's directory
+5. ✅ **Run link checker**: Use lychee with `lychee.toml` configuration
 
 ### Automated Validation
 
 **Before committing, ALWAYS run:**
 
 ```powershell
-# Validate all file references
-.\tools\psscripts\Validate-FileReferences.ps1
+# Lint markdown files
+npx --yes markdownlint-cli2 "docs/**/*.md"
 
-# Fix broken references automatically
-.\tools\psscripts\Fix-BrokenFileReferences.ps1
+# Check links (using lychee)
+docker run --rm -w /input -v "${PWD}:/input" lycheeverse/lychee:latest --config lychee.toml --no-progress README.md docs/**/*.md
 ```
 
-**CI/CD Integration:**
+**Or use provided scripts:**
 
-- Add validation script to pre-commit hooks
-- Fail builds if broken references found
-- Generate reports for review
+```powershell
+# Lint documentation
+./scripts/docs-lint.ps1
+
+# Validate links
+./scripts/docs-links.ps1
+```
 
 ### Prevention Guidelines
 
 **When creating new files:**
 
-1. Check if topic already exists in parts
-2. If splitting existing file, update ALL references immediately
-3. Use consistent naming: `Topic-Part1.md`, `Topic-Part2.md`, etc.
-4. If splitting again, use simplified naming: `Topic-Part1-A.md`, `Topic-Part1-B.md`
-
-**When splitting files:**
-
-1. Create new part files
-2. **IMMEDIATELY** run: `.\tools\psscripts\Validate-FileReferences.ps1` to find all references
-3. Update ALL references to point to correct part files
-4. Run validation again to verify
-5. Test navigation manually
+1. Check if file already exists with similar name
+2. Use consistent naming: `01_name.py`, `02_name.py`, etc.
+3. Verify directory structure: `L{level}/S{session}/`
 
 **When renaming files:**
 
-1. Find all references: `grep -r "old-filename.md" Reference/`
+1. Find all references: Search for old filename in documentation
 2. Update all references
-3. Run validation script
-4. Test navigation
+3. Test navigation manually
+4. Run link checker to verify

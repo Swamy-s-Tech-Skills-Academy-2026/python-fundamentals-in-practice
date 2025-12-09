@@ -1,35 +1,42 @@
-# Cross-Domain Integration
+# Cross-Level Integration
 
 **Version**: 1.0  
-**Last Updated**: November 6, 2025
+**Last Updated**: December 2025
 
 ---
 
-## 🔗 Cross-Domain Integration
+## 🔗 Cross-Level Integration
 
 All new content must connect to:
 
-- Upstream prerequisites
-- Peer topics it builds upon
-- Downstream applications it enables
-- Related stages in learning progression
+- Upstream prerequisites (previous sessions/levels)
+- Peer topics it builds upon (same level, earlier sessions)
+- Downstream applications it enables (later sessions/levels)
+- Related concepts across the curriculum
 
 **Connection Pattern**:
 
 ```markdown
-## 🔗 Related Topics
+## 📅 Session Flow
+
+| Part | Activity | Description |
+| ---- | -------- | ----------- |
+| 1    | Review   | Concepts from Session X |
+| 2    | Learn    | New concepts building on Session Y |
+| 3    | Practice  | Apply concepts for Session Z |
+
+---
+
+## 🔗 Related Sessions
 
 **Prerequisites**:
-- [Link to prerequisite content]
+- [Session X](docs/sessions/L1/SX.md) - Required concepts
 
 **Builds Upon**:
-- [Link to foundational concepts]
+- [Session Y](docs/sessions/L1/SY.md) - Foundational concepts
 
 **Enables**:
-- [Link to downstream applications]
-
-**Cross-References**:
-- [Link to related domains]
+- [Session Z](docs/sessions/L1/SZ.md) - Advanced applications
 ```
 
 ---
@@ -38,8 +45,8 @@ All new content must connect to:
 
 When creating content, always:
 
-1. **Identify Prerequisites**: What must learners know first?
-2. **Link to Foundations**: What does this build upon?
-3. **Show Applications**: What does this enable?
-4. **Cross-Reference**: Connect to related domains (Development, AI/ML, Data Science, DevOps)
-5. **Stage Mapping**: Which learning stages use this content?
+1. **Identify Prerequisites**: What sessions must learners complete first?
+2. **Link to Foundations**: What does this session build upon?
+3. **Show Applications**: What sessions does this enable?
+4. **Cross-Reference**: Connect to related concepts across levels
+5. **Level Mapping**: Which level does this content belong to?

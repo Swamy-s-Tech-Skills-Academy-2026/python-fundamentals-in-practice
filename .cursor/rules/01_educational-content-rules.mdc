@@ -419,9 +419,9 @@ Before committing:
 
 ## 🔍 Comprehensive Content Review Process
 
-**MANDATORY**: All content in `01_Reference/`, `02_Learning/`, and `03_Interview-Prep/` folders must undergo comprehensive review using CoT (Chain-of-Thought), ReAct (Reasoning + Acting), and systematic reasoning.
+**MANDATORY**: All content in `docs/sessions/` and `src/` folders must undergo comprehensive review before committing.
 
-**🚨 CRITICAL RULE ALIGNMENT**: Migration and Review use **THE EXACT SAME RULES AND CHECKLIST**. The 7-category Individual File Review Checklist MUST be applied during migration/transformation, not just during review. This ensures all content is compliant from the moment it's created.
+**Review Scope**: All session documentation and practice code files should be reviewed for quality, accuracy, and educational value.
 
 ### Review Request Protocol
 
@@ -429,15 +429,14 @@ Before committing:
 
 - ✅ **MANDATORY**: Review EACH AND EVERY file individually - no file should be skipped
 - ✅ **MANDATORY**: Open and examine every file in the specified scope
-- ✅ **MANDATORY**: Apply the 7-category review checklist to every single file
+- ✅ **MANDATORY**: Apply the review checklist to every single file
 - ❌ **NEVER**: Skip files, assume compliance, or review only a sample
 - ❌ **NEVER**: Review only files that "look problematic" - review ALL files
 
 **Scope of Review**:
-- If reviewing `01_Reference/` folder: Review ALL files in `01_Reference/`
-- If reviewing `02_Learning/` folder: Review ALL files in `02_Learning/`
-- If reviewing `03_Interview-Prep/` folder: Review ALL files in `03_Interview-Prep/`
-- If reviewing a specific subfolder: Review ALL files in that subfolder
+- If reviewing `docs/sessions/L{level}/`: Review ALL files in that level
+- If reviewing `src/L{level}/S{session}/`: Review ALL Python files in that session
+- If reviewing a specific session: Review both documentation and practice files
 - If reviewing specific files: Review each requested file individually
 
 ### Review Methodology
@@ -458,47 +457,42 @@ Before committing:
 
 **Review EACH AND EVERY file individually** - no file should be skipped:
 
-#### 1. YAML Frontmatter Review
-- [ ] YAML frontmatter present (starts with `---`)
-- [ ] All 5 required metadata fields present:
-  - [ ] `learning_level` (Beginner/Intermediate/Advanced/Reference)
-  - [ ] `prerequisites`
-  - [ ] `estimated_time`
-  - [ ] `learning_objectives`
-  - [ ] `related_topics` (with `enables:` key)
-- [ ] No placeholder patterns (`$101_`, `$102_`, etc.)
-- [ ] YAML syntax is valid
-- [ ] `enables:` key present in `related_topics` section
+#### 1. Session Documentation Review (docs/sessions/L{level}/S{session}.md)
+- [ ] Session overview present (duration, type, level)
+- [ ] Learning objectives are clear and measurable
+- [ ] Prerequisites listed (if any)
+- [ ] Content sections are well-structured
+- [ ] Practice files referenced correctly
+- [ ] Key takeaways included
+- [ ] Troubleshooting section included (if applicable)
+- [ ] All links work (practice files, images, cross-references)
 
-#### 2. Content Structure Review
-- [ ] File length ≤ 150 lines (excluding YAML frontmatter)
-- [ ] **If content exceeds 150 lines**: File has been SPLIT into multiple parts (not trimmed)
-- [ ] All educational content preserved across split parts
-- [ ] Has clear headings (## level)
-- [ ] Content is modular and focused
-- [ ] Follows 25-minute learning segment principle
+#### 2. Practice Code Review (src/L{level}/S{session}/*.py)
+- [ ] File headers include filename and session reference
+- [ ] Code runs without syntax errors
+- [ ] Code is beginner-friendly with clear comments
+- [ ] File naming follows convention: `01_name.py`, `02_name.py`
+- [ ] All code examples are educational and working
+- [ ] No placeholder code or TODOs
 
 #### 3. File Naming Review
-- [ ] Uses zero-padded numeric prefix (`01_`, `02_`, etc.)
-- [ ] **CRITICAL**: Never uses `00_` prefix - **NO EXCEPTIONS** (applies to ALL files including `docs/`)
-- [ ] Split files use correct naming: `Part1-A.md`, `Part1-B.md` (not `Part1A.md`)
-- [ ] Hyphens used for multi-word names
-- [ ] Rule applies to educational content AND documentation files
+- [ ] Python files use numeric prefixes: `01_`, `02_`, etc.
+- [ ] Session docs use format: `S1.md`, `S2.md`, `Plan.md`
+- [ ] Directory structure uses: `L{level}/S{session}/`
+- [ ] All paths are consistent
 
 #### 4. File References Review
-- [ ] All `enables:` references point to existing files
-- [ ] All `prerequisites:` references point to existing files
-- [ ] All `builds_upon:` references point to existing files
-- [ ] File names in references match actual file names exactly
-- [ ] No broken references remain
+- [ ] All practice file references point to existing files
+- [ ] All image references resolve correctly
+- [ ] All cross-session references use correct paths
+- [ ] No broken links remain
 
 #### 5. Content Quality Review
-- [ ] Has code examples (if applicable)
-- [ ] Has diagrams (Mermaid or ASCII)
+- [ ] Code examples are working and tested
+- [ ] Diagrams are clear (Mermaid or ASCII)
 - [ ] Content is transformative (not copied)
-- [ ] No suspicious patterns (Copyright, "All rights reserved", etc.)
 - [ ] Learning objectives are clear and measurable
-- [ ] Progressive scaffolding present (Foundations → Practice → Pitfalls → Next Steps)
+- [ ] Progressive scaffolding present (Foundations → Practice → Next Steps)
 
 #### 6. Zero-Copy Policy Review
 - [ ] No verbatim text from sources
@@ -508,10 +502,10 @@ Before committing:
 - [ ] Content adds educational value beyond source
 
 #### 7. Learning Progression Review
-- [ ] File numbering reflects logical learning dependencies
+- [ ] Session numbering reflects logical learning dependencies
 - [ ] Prerequisites come before dependent content
-- [ ] `enables:` relationships point to content numbered after
 - [ ] Learning order is logical and sequential
+- [ ] Mini projects consolidate previous sessions appropriately
 
 ### Deep Dive Review Process
 
@@ -519,24 +513,28 @@ Before committing:
 
 1. **Systematic File Scanning**
    ```powershell
-   # Get all files to review
-   Get-ChildItem "src\01_Reference" -Recurse -Filter "*.md" | 
-       Where-Object { $_.Name -ne "README.md" }
+   # Get all session documentation files
+   Get-ChildItem "docs\sessions" -Recurse -Filter "*.md"
+   
+   # Get all practice code files
+   Get-ChildItem "src" -Recurse -Filter "*.py"
    ```
 
 2. **Individual File Analysis**
    - Open each file
-   - Check YAML frontmatter structure
-   - Verify all metadata fields
-   - Count lines (must be ≤ 150)
+   - Check session documentation structure
+   - Verify all practice file references
+   - Test all Python code files
    - Check file naming conventions
    - Validate all file references
    - Review content quality indicators
 
-3. **Reference Validation**
+3. **Code Testing**
    ```powershell
-   # Run reference validation
-   .\tools\psscripts\Validate-FileReferences.ps1
+   # Test all Python files
+   Get-ChildItem "src" -Recurse -Filter "*.py" | ForEach-Object {
+       python $_.FullName
+   }
    ```
 
 4. **Content Quality Analysis**
@@ -556,9 +554,9 @@ Before committing:
 
 **Use these tools for comprehensive review**:
 
-- `.\tools\psscripts\Comprehensive-ReferenceReview.ps1` - Deep dive review with CoT/ReAct methodology
-- `.\tools\psscripts\Validate-FileReferences.ps1` - File reference validation
-- `.\tools\psscripts\Review-EducationalContent.ps1` - General compliance review
+- Markdown linting: `npx --yes markdownlint-cli2 "docs/**/*.md"`
+- Link checking: Use lychee with `lychee.toml` configuration
+- Python syntax: Test all `.py` files manually or with scripts
 
 ### Review Frequency
 

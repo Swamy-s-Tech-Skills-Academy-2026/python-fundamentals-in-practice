@@ -1,64 +1,58 @@
 # Repository Structure & Context
 
-**Version**: 1.4  
-**Last Updated**: November 24, 2025
+**Version**: 1.0  
+**Last Updated**: December 2025
 
 ---
 
 ## 🧭 Repository Context
 
-**ArchitectJourney** is a comprehensive learning and reference repository for aspiring software architects. It provides:
+**Python Fundamentals** is a comprehensive educational Python curriculum repository for Swamy's Tech Skills Academy. It provides:
 
-- Structured learning roadmap from foundational programming to architectural mastery
-- Reference materials for design patterns, principles, and best practices
-- Practical project examples and implementation guides
-- Leadership and strategic frameworks for technical decision-making
+- Structured learning roadmap from complete beginner to confident Python programmer
+- 9 progressive levels with 10 sessions each (30 minutes per session)
+- Hands-on practice files and mini projects
+- Clear progression: Noob → Nerd → Novice → Learner → Beginner → Practitioner → Skilled Coder → Specialist → Professional → Curious Learner
 
-**Target Audience**: Developers → Software Architects → Lead Architects → Technology Directors
+**Target Audience**: Complete beginners → Confident Python programmers
 
-**Learning Framework**: 9-stage unified progression combining core architecture fundamentals with leadership development
+**Learning Framework**: 9-level progression with 30-minute focused sessions and hands-on practice
 
-### 🚨 CRITICAL: Repository Purpose & Code Separation
+### 🚨 CRITICAL: Repository Purpose & Code Organization
 
-**This repository (`ArchitectJourney`) is EXCLUSIVELY for educational content:**
+**This repository (`python-fundamentals`) contains BOTH educational content AND practice code:**
 
-- ✅ **Educational Content Only**: Markdown documentation, learning materials, concepts, and illustrative code examples
-- ✅ **Minimal Code Examples**: Code snippets in educational content should be minimal, illustrative, and focused on teaching concepts
-- ❌ **NO Full Implementations**: Complete, runnable code projects are NOT stored in this repository
-- ❌ **NO Code Repositories**: This repository does not contain language-specific code implementations
+- ✅ **Educational Content**: Markdown documentation in `docs/sessions/` with session plans and explanations
+- ✅ **Practice Code**: Working Python files in `src/L{level}/S{session}/` for hands-on learning
+- ✅ **Working Examples**: All code examples must run without errors
+- ✅ **Beginner-Friendly**: All code should be understandable by complete beginners
+- ✅ **Educational Focus**: Code teaches concepts, not production implementations
 
-**Code Implementations Location:**
+**Code Organization:**
 
-All full code implementations, projects, and runnable examples are stored in **separate GitHub repositories** within the same organization (`SwamysArchitectJourney-2026`):
+All practice code is stored in `src/` directory organized by level and session:
 
-- `Python` - Python implementations
-- `CSharp` - C# and .NET projects
-- `JavaScript` - JavaScript/TypeScript projects
-- `Java` - Java and Spring Boot
-- `Go` - Go projects
-- `Cloud` - Infrastructure as Code
-- `AI-ML` - AI/ML implementations
+- `src/L1/S1/` - Level 1, Session 1 practice files
+- `src/L1/S2/` - Level 1, Session 2 practice files
+- Each session directory contains numbered practice files: `01_name.py`, `02_name.py`, etc.
 
 **Code Examples in Educational Content:**
 
-When including code examples in educational content:
+When including code examples in session documentation:
 
-- ✅ Use minimal, illustrative snippets to demonstrate concepts
-- ✅ Focus on teaching, not complete implementations
-- ✅ Reference full implementations in separate code repositories
-- ❌ Do not include complete, production-ready code
-- ❌ Do not create runnable projects in this repository
+- ✅ Reference practice files in `src/L{level}/S{session}/` directories
+- ✅ Include code snippets in documentation with proper formatting
+- ✅ Ensure all code examples are working and tested
+- ✅ Add educational comments explaining concepts
 
 ---
 
 ## 📁 Repository Structure
 
-### Current Structure (As of November 24, 2025)
+### Current Structure
 
 ```text
-ArchitectJourney/
-├── .copilot/                              # Copilot configuration
-│   └── settings.json
+python-fundamentals/
 ├── .cursor/                               # Cursor AI configuration
 │   └── rules/                             # Project rules (this directory)
 │       ├── 01_educational-content-rules.mdc
@@ -67,100 +61,86 @@ ArchitectJourney/
 │       ├── 04_markdown-standards.mdc
 │       ├── 05_primary-directives.mdc
 │       ├── 06_cross-domain-integration.mdc
-│       └── README.md
+│       ├── README.md
+│       └── rules.md
 ├── .github/                               # GitHub configuration
 │   ├── copilot-instructions.md            # GitHub Copilot instructions
-│   └── prompts/                           # Reusable prompt templates
-│       ├── smart-prompt-framework-guide.md
-│       └── task-prompt.md
+│   └── workflows/
+│       └── docs-quality.yml               # CI/CD for documentation quality
 ├── docs/                                  # Documentation hub
-│   ├── 01_GitHub-Organization-Strategy.md
-│   ├── 02_Workspace-Review-2025-11-23.md
-│   ├── review-reports/                     # All review reports (migration, content review, etc.)
-│   │   └── [DDMonYYYY.md]                 # Example: 24Nov2025.md (date-based naming)
-│   └── images/                            # Architecture diagrams and assets
-│       └── .gitkeep
+│   ├── images/                            # Educational images and screenshots
+│   │   └── S1/                            # Session 1 images
+│   └── sessions/                          # Session documentation
+│       └── L1/                            # Level 1: Noob → Nerd
+│           ├── Plan.md                    # Level 1 curriculum plan
+│           └── S1.md                      # Session 1 documentation
+├── scripts/                               # PowerShell utility scripts
+│   ├── docs-lint.ps1                     # Markdown linting script
+│   ├── docs-links.ps1                    # Link validation script
+│   ├── show-tree.ps1                     # Repository structure generator
+│   └── repo-structure.txt                # Generated structure
+├── src/                                   # Practice code files
+│   └── L1/                               # Level 1
+│       └── S1/                           # Session 1
+│           ├── 01_hello.py
+│           ├── 02_interactive_hello.py
+│           └── bytecode_demo.py
 ├── LICENSE                                 # MIT License
 ├── README.md                               # Main repository documentation
-└── .gitignore                             # Git ignore rules
-```
-
-### Current Structure (As of November 24, 2025)
-
-```text
-ArchitectJourney/
-├── .copilot/                              # Copilot configuration
-├── .cursor/                               # Cursor AI configuration
-├── .github/                               # GitHub configuration
-├── docs/                                  # Documentation hub
-├── src/                                   # Source content (organized)
-│   ├── 01_Reference/                     # Static knowledge base (compliant content)
-│   │   ├── 01_Development/               # Software development fundamentals
-│   │   ├── 02_AI-and-ML/                 # AI/ML knowledge base
-│   │   └── 05_DevOps/                    # DevOps practices and tools
-│   ├── 02_Learning/                       # Progressive learning paths (coming soon)
-│   └── 03_Interview-Prep/                # Interview preparation materials
-│       ├── Common/                       # Shared interview content
-│       ├── TPM/                          # Technical Project Manager prep
-│       ├── Architect/                    # Software Architect prep
-│       ├── Solution-Architect/           # Solution Architect prep
-│       └── Engineering-Manager/          # Engineering Manager prep
-├── source-materials/                      # Staging area (at repository root, git-ignored, non-compliant)
-│   └── [source content before transformation]
-└── tools/                                 # Automation and utilities
-    └── psscripts/                         # PowerShell scripts
-        ├── Get-FileStats.ps1
-        ├── Get-MarkdownSummary.ps1
-        ├── Get-RepoStats.ps1
-        ├── Compare-DocFiles.ps1
-        ├── Find-DuplicateContent.ps1
-        ├── Quick-HealthCheck.ps1
-        └── README.md
+├── lychee.toml                            # Link checker configuration
+├── .markdownlint.json                     # Markdown linting rules
+└── .markdownlint-cli2.yaml                 # Markdown linting CLI config
 ```
 
 ---
 
-## 📁 Source Materials Staging Area
+## 📁 Content Organization
 
-**Location**: `source-materials/` (at repository root, git-ignored)
+### Session Documentation
 
-**Purpose**: **Staging folder for migration** - Permanent staging area where source content is placed before review and transformation into ArchitectJourney educational content.
+**Location**: `docs/sessions/L{level}/`
 
-**Critical Workflow**:
+**Structure**:
+- `Plan.md` - Complete level curriculum plan
+- `S1.md`, `S2.md`, etc. - Individual session documentation
+- Each session document references practice files in `src/L{level}/S{session}/`
 
-1. **Place materials**: User places source materials (transcripts, notes, documents) in `source-materials/` folder (at repository root)
-2. **Review and migrate**: AI assistant reviews ALL files, identifies unique content, and migrates/transforms following Educational Content Rules
-3. **Verify migration**: Confirm all unique content has been migrated to `src/01_Reference/`, `src/02_Learning/`, or `src/03_Interview-Prep/`
-4. **Create verification report**: Generate migration verification report in `docs/review-reports/` with date-based naming (format: `DDMonYYYY.md`, e.g., `24Nov2025.md`)
-5. **Keep source files**: After successful migration, keep source files in `source-materials/` folder - user will delete manually
+### Practice Code Files
 
-**Important**:
+**Location**: `src/L{level}/S{session}/`
 
-- Files in `source-materials/` are **NOT required to be compliant** - they are raw source materials
-- The `source-materials/` folder itself is **permanent** - it's a staging area for ongoing migrations
-- After migration, **keep source files** in `source-materials/` folder - user will delete manually
+**Structure**:
+- Numbered practice files: `01_name.py`, `02_name.py`, etc.
+- All files must be working and tested
+- File headers include filename and session reference
 
-### Learning Paths Structure
+### Images and Assets
 
-**Important**: `Learning/` folders are created **as needed** when learning content is ready to be added. Empty folders are acceptable and expected.
+**Location**: `docs/images/S{session}/`
+
+**Structure**:
+- Educational images organized by session
+- Reference images in session documentation using relative paths
+- Example: `../../images/S1/Help_V1.PNG`
+
+### Level and Session Creation Policy
+
+**Important**: Level and session directories are created **as needed** when content is ready.
 
 **Policy**:
-
-- ✅ Create `Learning/` folder structure when you have content ready to add
-- ✅ Empty folders are acceptable - they indicate planned content
-- ✅ Do not create empty folder hierarchies in advance
-- ✅ Add content following Educational Content Rules when ready
-- ✅ Create folders progressively as learning progresses
-
-**Current Status**: `Learning/01_Core-Architecture-Path/` and `Learning/02_Lead-Architect-Path/` exist but are empty, which is acceptable per this policy.
+- ✅ Create `L{level}/S{session}/` directories when you have content ready to add
+- ✅ Follow the 9-level progression structure (L1 through L9)
+- ✅ Each level contains 10 sessions (S1 through S10) plus 2 mini projects
+- ✅ Add content progressively following Educational Content Rules
+- ✅ Create folder structure incrementally as curriculum develops
 
 ## 📞 Support & Escalation
 
-**Questions about content placement?** → Check `docs/02_RepositoryStructure.md`
+**Questions about content placement?** → Check `README.md` and `.github/copilot-instructions.md`
 
-**Content too long?** → Create multi-part structure (Part 1, Part 2, Part N)
+**Content too long?** → Split into multiple parts or simplify for 30-minute sessions
 
-**Encoding issues?** → Search for, replace with Unicode equivalents
+**Encoding issues?** → Search for replacement characters, replace with Unicode equivalents
 
 **Link broken?** → Update URLs or fix internal file references
 
@@ -170,8 +150,9 @@ ArchitectJourney/
 
 ## For More Information
 
-- **Repository**: <https://github.com/Swamy-s-Tech-Skills-Academy/ArchitectJourney>
-- **Master Roadmap**: `docs/01_UnifiedArchitectMasteryRoadmap.md`
-- **Structure Reference**: `docs/02_RepositoryStructure.md`
+- **Repository**: Python Fundamentals (Swamy's Tech Skills Academy)
+- **Main Documentation**: `README.md`
+- **Level 1 Plan**: `docs/sessions/L1/Plan.md`
+- **Session 1**: `docs/sessions/L1/S1.md`
 - **GitHub Copilot Instructions**: `.github/copilot-instructions.md`
-- **Automation Scripts**: `tools/psscripts/README.md`
+- **Utility Scripts**: `scripts/` directory

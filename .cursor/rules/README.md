@@ -1,9 +1,9 @@
-# Cursor AI Project Rules
+# Cursor AI Project Rules - Python Fundamentals
 
 **Version**: 1.0  
-**Last Updated**: November 6, 2025
+**Last Updated**: December 2025
 
-This directory contains modular rule files for Cursor AI, following the recommended Project Rules structure.
+This directory contains modular rule files for Cursor AI, customized for the Python Fundamentals educational curriculum repository.
 
 ---
 
@@ -11,32 +11,37 @@ This directory contains modular rule files for Cursor AI, following the recommen
 
 ### `01_educational-content-rules.mdc`
 **Priority**: MANDATORY  
-**Content**: Zero-Copy Policy, Transformative Workflow, 25-minute segments, metadata requirements, educational excellence standards
+**Content**: Zero-Copy Policy, Transformative Workflow, 30-minute sessions, session structure requirements, educational excellence standards, Python code standards
 
 ### `02_repository-structure.mdc`
-**Content**: Repository context, structure overview, support resources
+**Content**: Python Fundamentals repository context, structure overview (L{level}/S{session}/), support resources
 
 ### `03_quality-assurance.mdc`
-**Content**: Quality checklists (content, technical, documentation)
+**Content**: Quality checklists (content, technical, documentation), Python code testing requirements
 
 ### `04_markdown-standards.mdc`
-**Content**: Markdown authoring standards, encoding requirements, code fences, diagrams
+**Content**: Markdown authoring standards, session documentation structure, file reference validation, encoding requirements
 
 ### `05_primary-directives.mdc`
-**Content**: Primary directives, automation-first approach, update verification protocol
+**Content**: Primary directives, automation-first approach, update verification protocol, file naming validation
 
 ### `06_cross-domain-integration.mdc`
-**Content**: Cross-domain integration requirements, connection patterns
+**Content**: Cross-level integration requirements, session connection patterns, prerequisite relationships
+
+### `rules.md`
+**Content**: Comprehensive rules file (legacy format, kept for reference)
 
 ---
 
-## 🔄 Migration from `.cursorrules`
+## 🎯 Repository-Specific Rules
 
-The root `.cursorrules` file has been split into these modular files for better:
-- **Version Control**: Individual files easier to track
-- **Modularity**: Update specific rules without affecting others
-- **Maintainability**: Clear organization by topic
-- **Scalability**: Easy to add new rule files
+This rule set is customized for the **Python Fundamentals** repository:
+
+- **Structure**: Uses `L{level}/S{session}/` directory format
+- **Sessions**: 30-minute focused learning sessions
+- **Code**: Working Python practice files in `src/L{level}/S{session}/`
+- **Documentation**: Session docs in `docs/sessions/L{level}/`
+- **Levels**: 9 progressive levels (Noob → Nerd → ... → Curious Learner)
 
 ---
 
@@ -51,8 +56,28 @@ The root `.cursorrules` file has been split into these modular files for better:
 
 ## 🔗 Related Files
 
-- **Root `.cursorrules`**: Kept for backward compatibility (can be removed after migration verified)
 - **GitHub Copilot**: `.github/copilot-instructions.md` (similar rules for GitHub Copilot)
+- **Main README**: `README.md` (repository overview and structure)
+- **Session Documentation**: `docs/sessions/L1/Plan.md` (Level 1 curriculum plan)
+
+---
+
+## 🚀 Quick Reference
+
+**File Naming**:
+- Python files: `01_name.py`, `02_name.py`
+- Session docs: `S1.md`, `S2.md`, `Plan.md`
+- Directories: `L1/S1/`, `L1/S2/`
+
+**Path References**:
+- Practice files: `src/L1/S1/01_hello.py`
+- Session docs: `docs/sessions/L1/S1.md`
+- Images: `docs/images/S1/Help_V1.PNG`
+
+**Quality Checks**:
+- Markdown linting: `npx --yes markdownlint-cli2 "docs/**/*.md"`
+- Link checking: Use lychee with `lychee.toml`
+- Python testing: Test all `.py` files manually
 
 ---
 

@@ -1,13 +1,13 @@
 # Primary Directives
 
-**Version**: 1.1  
-**Last Updated**: November 23, 2025
+**Version**: 1.0  
+**Last Updated**: December 2025
 
 ---
 
 ## 🎯 Primary Directives
 
-### 1. ArchitectJourney Educational Content Rules (MANDATORY)
+### 1. Python Fundamentals Educational Content Rules (MANDATORY)
 
 **All content creation must follow these rules without exception.**
 
@@ -16,25 +16,22 @@ See: `01_educational-content-rules.mdc` for complete details.
 ### 2. Automation-First Approach
 
 ✅ **ALWAYS**: Create reusable PowerShell scripts for repetitive tasks  
-✅ **ALWAYS**: Use existing scripts in `tools/psscripts/` first  
+✅ **ALWAYS**: Use existing scripts in `scripts/` first  
 ✅ **ALWAYS**: Enhance existing scripts rather than duplicating  
 ❌ **NEVER**: Execute individual commands for tasks repeated 2+ times
 
 **Decision Tree**:
 
-1. Check `tools/psscripts/` for existing script
+1. Check `scripts/` for existing script
 2. Enhance existing script if close match
 3. Create new `.ps1` for any repeated task
 4. Document with examples and parameters
 
-**Available Automation** (tools/psscripts/):
+**Available Automation** (scripts/):
 
-- `Get-FileStats.ps1` - File statistics analysis
-- `Get-MarkdownSummary.ps1` - Markdown file analysis
-- `Get-RepoStats.ps1` - Repository overview
-- `Compare-DocFiles.ps1` - Compare multiple files
-- `Find-DuplicateContent.ps1` - Find duplicate headings
-- `Quick-HealthCheck.ps1` - Fast workspace health check
+- `docs-lint.ps1` - Markdown linting script
+- `docs-links.ps1` - Link validation script
+- `show-tree.ps1` - Repository structure generator
 
 ### 3. Update Verification Protocol (CRITICAL)
 
@@ -43,7 +40,8 @@ See: `01_educational-content-rules.mdc` for complete details.
 1. ✅ `.github/copilot-instructions.md` - Repository Structure section
 2. ✅ `README.md` - Repository Structure section
 3. ✅ Relevant documentation files
-4. ✅ Run verification: `.\Quick-HealthCheck.ps1` from tools/psscripts/
+4. ✅ Test all Python code files still work
+5. ✅ Run markdownlint: `npx --yes markdownlint-cli2 "docs/**/*.md"`
 
 **Self-Check Question**: "Did I update the instruction file?" - If no, STOP and do it NOW.
 
@@ -51,12 +49,9 @@ See: `01_educational-content-rules.mdc` for complete details.
 
 **Before creating or committing ANY numbered file, validate naming**:
 
-1. ✅ **Check for `00_` prefix**: **NEVER ALLOWED** - Use `01_` instead
-2. ✅ **Verify scope**: Rule applies to **ALL files** including:
-   - Educational content (`01_Reference/`, `02_Learning/`)
-   - Documentation files (`docs/`)
-   - Any numbered files anywhere in repository
-3. ✅ **Quick validation**: Run `Get-ChildItem -Recurse -Filter "*00_*"` to find violations
-4. ✅ **NO EXCEPTIONS**: `00_` is NEVER allowed, even for meta/documentation files
+1. ✅ **Python files**: Use `01_`, `02_`, etc. prefixes (e.g., `01_hello.py`)
+2. ✅ **Session docs**: Use `S1.md`, `S2.md`, `Plan.md` format
+3. ✅ **Directory structure**: Use `L{level}/S{session}/` format
+4. ✅ **Verify paths**: All references use correct `L{level}/S{session}/` structure
 
-**Self-Check Question**: "Does this file use `00_` prefix?" - If yes, RENAME to `01_` or appropriate number.
+**Self-Check Question**: "Do all file references use the correct L{level}/S{session}/ format?" - If no, FIX immediately.
