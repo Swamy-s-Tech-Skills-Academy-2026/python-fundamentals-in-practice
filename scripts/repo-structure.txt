@@ -1,0 +1,37 @@
+├── .gitignore
+├── .markdownlint-cli2.yaml
+├── .markdownlint.json
+├── .markdownlintignore
+├── LICENSE
+├── lychee.toml
+├── README.md
+├── .copilot
+│   └── settings.json
+├── .github
+│   ├── copilot-instructions.md
+│   ├── prompts
+│   │   └── .gitkeep
+│   └── workflows
+│       └── docs-quality.yml
+├── docs
+│   ├── images
+│   │   └── S1
+│   │       ├── Help_V1.PNG
+│   │       ├── Help_V2.PNG
+│   │       └── Py_Source_ByteCode.PNG
+│   └── sessions
+│       └── L1
+│           ├── Plan.md
+│           ├── req.md
+│           └── S1.md
+├── scripts
+│   ├── docs-links.ps1
+│   ├── docs-lint.ps1
+│   ├── repo-structure.txt
+│   └── show-tree.ps1
+└── src
+    └── L1
+        └── S1
+            ├── 01_hello.py
+            ├── 02_interactive_hello.py
+            └── bytecode_demo.py
