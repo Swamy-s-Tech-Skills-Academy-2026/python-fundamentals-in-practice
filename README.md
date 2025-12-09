@@ -16,8 +16,8 @@ python-fundamentals/
 │   └── sessions/
 │       └── L1/                # Level 1: Noob → Nerd
 │           ├── Plan.md        # Complete Level 1 curriculum plan
-│           ├── req.md         # Level 1 requirements and structure
 │           └── S1.md          # Session 1: Python Introduction & Environment Setup
+│           # S2.md and beyond - coming soon
 ├── 💻 src/
 │   └── L1/
 │       └── S1/                # Session 1 practice files

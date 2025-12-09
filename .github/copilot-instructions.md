@@ -33,13 +33,15 @@
 
 ### **Current Organization:**
 ```
-pyfundamentals/
+python-fundamentals/
 ├── docs/
+│   ├── images/              # Educational images and screenshots
+│   │   └── S1/              # Session 1 images
 │   └── sessions/
 │       └── L1/              # Level 1: Noob → Nerd
 │           ├── Plan.md      # Overall Level 1 curriculum plan
-│           ├── S1.md        # Session 1: Environment & Setup
-│           └── S2.md        # Session 2: Variables & Data Types
+│           └── S1.md        # Session 1: Environment & Setup
+│           # S2.md and beyond - coming soon
 ├── src/
 │   └── L1/
 │       └── S1/              # Session 1 practice files
@@ -196,6 +198,18 @@ Before submitting any changes, verify:
 - Rush through complex modifications
 - Ignore the existing pedagogical structure
 - Make changes without clear justification
+
+---
+
+## 🔗 **Related Documentation**
+
+- **Cursor AI Rules**: `.cursor/rules/` - Comprehensive modular rules for Cursor AI
+  - See `.cursor/rules/README.md` for overview of all rule files
+  - Rules cover: educational content, repository structure, quality assurance, markdown standards, primary directives, cross-level integration
+- **Main README**: `README.md` - Project overview and quick start guide
+- **Level 1 Plan**: `docs/sessions/L1/Plan.md` - Complete Level 1 curriculum plan
+
+**Note**: `.cursor/rules/` and `.github/copilot-instructions.md` should be kept in sync. Both provide guidance for AI assistants working with this repository.
 
 ---
 

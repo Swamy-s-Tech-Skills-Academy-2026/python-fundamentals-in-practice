@@ -204,10 +204,11 @@ All content must demonstrate:
 
 ## 📁 Content Placement Policy
 
-✅ `Reference/` is EXCLUSIVELY for learning content  
-❌ Never mix planning materials, workflow docs, or meta content  
-✅ Group logically by learning progression, not source structure  
-✅ Place content in correct domain folder (Development/AI-ML/Data-Science/DevOps)
+✅ `docs/sessions/L{level}/` is EXCLUSIVELY for session documentation  
+✅ `src/L{level}/S{session}/` is EXCLUSIVELY for practice code files  
+❌ Never mix planning materials, workflow docs, or meta content in session directories  
+✅ Group logically by learning progression (Level → Session)  
+✅ Place content in correct level and session folders
 
 ### 🚨 CRITICAL: Code Examples Policy
 
@@ -267,69 +268,32 @@ print('Hello, World!')
 4. **Test Everything**: Ensure all code runs and all links work
 5. **Quality Check**: Run markdownlint and link validation before committing
 
-**Transformation Workflow** (Using CoT, ReAct, and Reasoning):
+**Content Creation Workflow**:
 
-**🚨 CRITICAL**: This workflow uses **THE EXACT SAME 7-CATEGORY REVIEW CHECKLIST** as the Comprehensive Content Review Process. Every file created during migration MUST pass all review checks before being considered complete.
+1. **PLAN**: Review curriculum structure and learning objectives
+   - Identify appropriate level and session
+   - Check prerequisites and dependencies
+   - Plan content structure following session documentation format
 
-1. **OBSERVE**: Place source materials (transcripts, notes, etc.) in `source-materials/` (at repository root)
-   - Scan and catalog source content
-   - Identify key concepts and learning objectives
-   - Understand source structure and dependencies
+2. **CREATE**: Develop session content following Educational Content Rules
+   - Write session documentation in `docs/sessions/L{level}/S{session}.md`
+   - Create practice files in `src/L{level}/S{session}/`
+   - Ensure all code examples are working and tested
+   - Follow 30-minute session format
 
-2. **ANALYZE**: Apply review rules DURING transformation using CoT/ReAct methodology:
-   - **Reason through transformation**: Break down source content into logical learning segments
-   - **Apply 7-category review checklist while transforming**:
-     - Verify YAML frontmatter structure as you create it
-     - Ensure content is transformative (not copied) during transformation
-     - **Check line count as you build content (≤ 150 lines) - SPLIT if exceeds, NEVER TRIM**
-     - Validate file naming conventions during creation
-     - Verify file references as you add them
-     - Ensure zero-copy policy compliance during transformation
-     - Confirm learning progression logic as you structure content
-     - **Preserve ALL educational content through splitting, not condensing**
-   - **Use Chain-of-Thought**: Think through each transformation step explicitly
-   - **Apply Reasoning**: Make logical decisions about content structure, examples, and explanations
+3. **REVIEW**: Apply comprehensive review checklist
+   - Verify session structure is complete
+   - Test all Python code files
+   - Check all file references work
+   - Validate markdown formatting
 
-3. **REASON**: Create new educational content in appropriate `01_Reference/`, `02_Learning/`, or `03_Interview-Prep/` folders
-   - Apply logical reasoning to determine correct placement
-   - Ensure learning dependencies are properly structured
-   - Verify content flow and progression
+4. **VERIFY**: Final quality checks before committing
+   - Run markdownlint
+   - Run link checker
+   - Test all code examples
+   - Verify all paths are correct
 
-4. **VERIFY**: Review final content using comprehensive review checklist before committing
-   - Cross-check all requirements
-   - Validate compliance with all rules
-   - Confirm zero-copy policy adherence
-   - **Create migration verification report** in `docs/review-reports/` with date-based naming (e.g., `24Nov2025.md`)
-
-5. **ACT**: After successful migration and verification:
-   - Keep source files in `source-materials/` folder - user will delete manually
-   - Save migration verification report to `docs/review-reports/` with date-based filename
-
-**Compliance Requirements**:
-- ❌ `source-materials/` files: **NO compliance required** (staging area - raw source content)
-- ✅ **Transformation process**: **MUST follow review rules** (apply checklist during transformation)
-- ✅ `01_Reference/` files: **FULL compliance required** (final content - must pass all review checks)
-- ✅ `02_Learning/` files: **FULL compliance required** (final content - must pass all review checks)
-- ✅ `03_Interview-Prep/` files: **FULL compliance required** (final content - must pass all review checks)
-
-**Review During Migration** (Using CoT, ReAct, and Reasoning):
-
-- **OBSERVE**: Systematically analyze source content before transformation
-- **ANALYZE**: Apply the 7-category Individual File Review Checklist **while transforming** content
-  - Use Chain-of-Thought to break down transformation into logical steps
-  - Apply ReAct methodology: Observe → Analyze → Reason → Verify → Act
-  - Use systematic reasoning to make transformation decisions
-- **REASON**: Make logical decisions about:
-  - Content structure and organization
-  - Example selection and creation
-  - Learning progression and dependencies
-  - File naming and references
-- **VERIFY**: Don't wait until after migration - catch issues during the transformation process
-  - Verify compliance at each step: YAML structure, line count, naming, references, zero-copy policy
-  - Cross-check findings as you transform
-- **ACT**: Final review after migration confirms all requirements are met
-
-**🚨 CRITICAL RULE ALIGNMENT**: Migration and Review use **THE EXACT SAME RULES AND CHECKLIST**. The 7-category Individual File Review Checklist (YAML Frontmatter, Content Structure, File Naming, File References, Content Quality, Zero-Copy Policy, Learning Progression) MUST be applied during migration/transformation, not just during review. The same CoT, ReAct, and Reasoning methodology used for reviews MUST be applied during migration/transformation.
+5. **COMMIT**: After all checks pass, commit changes
 
 ### Level and Session Creation Policy
 
@@ -561,8 +525,8 @@ Before committing:
 ### Review Frequency
 
 - **Before committing**: Review all modified files
-- **After splitting files**: Review all affected files and references
-- **Periodic audits**: Comprehensive review of entire `01_Reference/` folder
+- **After creating new sessions**: Review both documentation and practice files
+- **Periodic audits**: Comprehensive review of entire level when complete
 - **After major changes**: Full review of affected sections
 
 ### Review Documentation

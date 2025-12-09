@@ -153,5 +153,7 @@ python-fundamentals/
 - **Main Documentation**: `README.md`
 - **Level 1 Plan**: `docs/sessions/L1/Plan.md`
 - **Session 1**: `docs/sessions/L1/S1.md`
-- **GitHub Copilot Instructions**: `.github/copilot-instructions.md`
+- **GitHub Copilot Instructions**: `.github/copilot-instructions.md` (should be kept in sync with .cursor/rules/)
 - **Utility Scripts**: `scripts/` directory
+
+**Note**: `.cursor/rules/` and `.github/copilot-instructions.md` should be kept in sync. Both provide guidance for AI assistants working with this repository.
