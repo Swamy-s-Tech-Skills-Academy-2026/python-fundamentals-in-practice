@@ -416,3 +416,16 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.bin
+*.obj
+.venv/
+.env
+.DS_Store
+.vscode/
+*.log
