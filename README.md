@@ -16,8 +16,9 @@ python-fundamentals/
 │   └── sessions/
 │       └── L1/                # Level 1: Noob → Nerd
 │           ├── Plan.md        # Complete Level 1 curriculum plan
-│           └── S1.md          # Session 1: Python Introduction & Environment Setup
-│           # S2.md and beyond - coming soon
+│           ├── S1.md          # Session 1: Python Introduction & Environment Setup
+│           ├── S2.md          # Session 2: Variables & Data Types
+│           # S3.md and beyond - coming soon
 ├── 💻 src/
 │   └── L1/
 │       └── S1/                # Session 1 practice files
@@ -61,11 +62,11 @@ python-fundamentals/
 
 - **📚 Level 1 Documentation:** Complete curriculum plan and structure
 - **📖 Session 1:** Full content with practice files - [**View Session 1**](docs/sessions/L1/S1.md)
+- **📖 Session 2:** Variables & Data Types - [**View Session 2**](docs/sessions/L1/S2.md)
 - **🔧 Development Infrastructure:** Documentation quality automation with CI/CD pipeline
 
 ### **🚧 In Development:**
 
-- **📖 Session 2:** Variables & Data Types _(in progress)_
 - **📖 Sessions 3-10:** Coming soon
 
 ### **📊 Repository Health:**
