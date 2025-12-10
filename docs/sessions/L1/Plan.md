@@ -34,7 +34,8 @@ sessions:
     topic: "Variables & Data Types"
     duration: "30 min"
     type: "Knowledge"
-    status: "In Progress"
+    status: "Ready"
+    file: "docs/sessions/L1/S2.md"
   - session: 3
     topic: "Operators & Expressions"
     duration: "30 min"
@@ -97,7 +98,7 @@ sessions:
 | Phase | Session | Topic                                                 | Duration  | Type         | Status         |
 | ----- | ------- | ----------------------------------------------------- | --------- | ------------ | -------------- |
 | A     | 1       | Python Introduction, Environment & Built-in Functions | 30 min    | 📚 Knowledge | ✅ Ready 📂     |
-| A     | 2       | Variables & Data Types                                | 30 min    | 📚 Knowledge | 🚧 In Progress |
+| A     | 2       | Variables & Data Types                                | 30 min    | 📚 Knowledge | ✅ Ready 📂     |
 | A     | 3       | Operators & Expressions                               | 30 min    | 📚 Knowledge | 🔄 Coming Soon |
 | A     | 4       | Conditionals, Indentation & Introduction to Modules   | 30 min    | 📚 Knowledge | 🔄 Coming Soon |
 | A     | 🚀 MP1  | Mini Project 1: Simple Calculator *(after Session 4)* | 30–45 min | 🛠️ Project  | 🔄 Coming Soon |
