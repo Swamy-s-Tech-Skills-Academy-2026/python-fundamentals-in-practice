@@ -91,6 +91,38 @@ python-fundamentals/
 
 ---
 
+## 🧠 **CoT/ReAct METHODOLOGY**
+
+### **For Content CREATION (THINK → REASON → ACT → VERIFY):**
+
+| Phase | Steps |
+|-------|-------|
+| **THINK** | Understand objective → Decompose into chunks → Sequence logically → Anticipate misconceptions |
+| **REASON** | Check prerequisites → Map connections → Design examples → Identify pitfalls |
+| **ACT** | Write content → Create code examples → Add diagrams → Design exercises |
+| **VERIFY** | Is it clear? → Complete? → Progressive? → Original? |
+
+### **For Content REVIEW (OBSERVE → ANALYZE → REASON → VERIFY → ACT):**
+
+| Phase | Steps |
+|-------|-------|
+| **OBSERVE** | Scan and catalog ALL files in scope |
+| **ANALYZE** | Open and examine EVERY file individually |
+| **REASON** | Apply logical reasoning to identify issues |
+| **VERIFY** | Cross-check findings and validate compliance |
+| **ACT** | Document findings and update content |
+
+### **Decision Framework:**
+
+```text
+CREATION: THINK → REASON → ACT → VERIFY → (iterate if needed)
+REVIEW:   OBSERVE → ANALYZE → REASON → VERIFY → ACT
+```
+
+**See `.cursor/rules/01_educational-content-rules.mdc` for full CoT/ReAct details.**
+
+---
+
 ## 🔧 **EDITING GUIDELINES**
 
 ### **When Making Changes:**
@@ -223,7 +255,7 @@ Before submitting any changes, verify:
   - See `.cursor/rules/README.md` for overview of all rule files
   - Rules cover: educational content, repository structure, quality assurance, markdown standards, primary directives, cross-level integration
 - **Main README**: `README.md` - Project overview and quick start guide
-- **Level 1 Plan**: `docs/sessions/L1/Plan.md` - Complete Level 1 curriculum plan
+- **Level 1 Plan**: `docs/sessions/L1/_Plan.md` - Complete Level 1 curriculum plan
 
 **Note**: `.cursor/rules/` and `.github/copilot-instructions.md` should be kept in sync. Both provide guidance for AI assistants working with this repository.
 
