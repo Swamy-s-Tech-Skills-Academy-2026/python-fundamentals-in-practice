@@ -45,6 +45,7 @@ For a detailed repository structure, see **[Repository Structure](docs/Repositor
 | 1 | S1 | Python Introduction & Environment | [01_S1.md](docs/sessions/L1/01_S1.md) | `src/L1/S1/` |
 
 **Practice Files in S1:**
+
 - `01_hello.py` - Basic output and comments
 - `02_interactive_hello.py` - User input and f-strings
 - `bytecode_demo.py` - Python compilation demonstration

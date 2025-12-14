@@ -141,6 +141,7 @@ Cursor AI configuration:
 | 1 | `01_S1.md` | Python Introduction & Environment | 3 files |
 
 **Practice Files in S1:**
+
 - `01_hello.py` - Basic output and comments
 - `02_interactive_hello.py` - User input and f-strings
 - `bytecode_demo.py` - Python compilation demonstration
