@@ -112,6 +112,59 @@
 - ✅ Builds on Session 1, enables Session 3
 - ✅ Original examples (not from any textbook)
 
+### Reasoning in Educational Content
+
+When writing session documentation and explanations, make the thought process explicit:
+
+#### ✅ DO: Show the "Why" Behind Code Design Decisions
+
+```markdown
+## Code Design Decision: Choosing a Data Structure
+
+**Context**: We need to store student names and their grades for quick lookup.
+
+**Reasoning Chain**:
+1. Student names are unique identifiers (no duplicates needed)
+2. Need to associate each name with a grade (key-value relationship)
+3. Will frequently look up grades by name (fast access required)
+4. Order doesn't matter for this use case
+
+**Decision**: Dictionary (`dict`) - `{"Alice": 95, "Bob": 87}`
+**Trade-off**: Fast O(1) lookup, but requires unique keys
+**Alternative Considered**: List of tuples - slower O(n) lookup, but allows duplicates
+```
+
+#### ❌ AVOID: Stating Facts Without Reasoning
+
+```markdown
+## Code Design Decision: Choosing a Data Structure
+Use a dictionary for student grades.  ← No reasoning provided
+```
+
+**Why This Matters**: Learners need to understand the thought process behind code decisions, not just memorize syntax. This builds problem-solving skills.
+
+### ReAct Pattern for Code Examples
+
+Use this iterative pattern when creating code examples:
+
+```text
+THOUGHT: Why is this code structure optimal for teaching this concept?
+ACTION:  Write the code example with clear comments explaining the reasoning
+OBSERVE: Does this demonstrate the concept clearly for a beginner?
+REPEAT:  Until the code example effectively teaches the concept
+```
+
+**Example Application**:
+
+```text
+THOUGHT: Beginners need to see why we use variables instead of hardcoding values
+ACTION:  Create example showing same calculation with and without variables
+OBSERVE: Does this clearly show the benefit? Need to add explanation
+THOUGHT: Should I show a scenario where variables make code reusable?
+ACTION:  Add second example showing how variables enable code reuse
+OBSERVE: Now the concept is clear - variables make code flexible and reusable
+```
+
 ---
 
 ## ⏱️ 30-Minute Learning Segments
@@ -529,6 +582,9 @@ Before committing:
 - [ ] All image references resolve correctly
 - [ ] All cross-session references use correct paths
 - [ ] No broken links remain
+- [ ] File names in references match actual file names exactly (including `01_`, `02_` prefixes)
+- [ ] References use correct `L{level}/S{session}/` directory structure
+- [ ] No references to renamed or moved files without updates
 
 #### 5. Content Quality Review
 - [ ] Code examples are working and tested
@@ -549,6 +605,13 @@ Before committing:
 - [ ] Prerequisites come before dependent content
 - [ ] Learning order is logical and sequential
 - [ ] Mini projects consolidate previous sessions appropriately
+
+#### 8. Reasoning and Explanation Quality Review
+- [ ] Code design decisions include explicit reasoning (why this approach?)
+- [ ] Examples show the thought process, not just syntax
+- [ ] Alternative approaches mentioned with reasons for choice
+- [ ] Reasoning chain is traceable from problem to solution
+- [ ] Beginners can understand WHY, not just WHAT
 
 ### Deep Dive Review Process
 
