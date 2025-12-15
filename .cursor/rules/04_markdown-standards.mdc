@@ -126,6 +126,7 @@ Before finalizing session documentation:
 ```markdown
 # WRONG - Incorrect path format
 [Session 1](docs/sessions/S1.md)
+[Session 1](docs/sessions/L1/S1.md)
 [Practice File](src/S1/01_hello.py)
 ```
 
@@ -139,7 +140,7 @@ Before finalizing session documentation:
 
 ```markdown
 # CORRECT - Proper path format
-[Session 1](docs/sessions/L1/S1.md)
+[Session 1](docs/sessions/L1/01_S1.md)
 [Practice File](src/L1/S1/01_hello.py)
 ```
 
@@ -188,8 +189,8 @@ Before finalizing session documentation:
 **When referencing session documentation:**
 
 ```markdown
-[Session 1](docs/sessions/L1/S1.md)
-[Level 1 Plan](docs/sessions/L1/Plan.md)
+[Session 1](docs/sessions/L1/01_S1.md)
+[Level 1 Plan](docs/sessions/L1/_Plan.md)
 ```
 
 **When referencing images:**
