@@ -429,3 +429,6 @@ __pycache__/
 .DS_Store
 .vscode/
 *.log
+
+## Source Material
+source-material/

@@ -55,7 +55,7 @@ This rule set is customized for the **Python Fundamentals** repository:
 
 - **GitHub Copilot**: `.github/copilot-instructions.md` (similar rules for GitHub Copilot)
 - **Main README**: `README.md` (repository overview and structure)
-- **Session Documentation**: `docs/sessions/L1/Plan.md` (Level 1 curriculum plan)
+- **Session Documentation**: `docs/sessions/L1/_Plan.md` (Level 1 curriculum plan)
 
 ---
 
@@ -63,12 +63,12 @@ This rule set is customized for the **Python Fundamentals** repository:
 
 **File Naming**:
 - Python files: `01_name.py`, `02_name.py`
-- Session docs: `S1.md`, `S2.md`, `Plan.md`
+- Session docs: `01_S1.md`, `02_S2.md`, `_Plan.md` (underscore prefix sorts first)
 - Directories: `L1/S1/`, `L1/S2/`
 
 **Path References**:
 - Practice files: `src/L1/S1/01_hello.py`
-- Session docs: `docs/sessions/L1/S1.md`
+- Session docs: `docs/sessions/L1/01_S1.md`
 - Images: `docs/images/S1/Help_V1.PNG`
 
 **Quality Checks**:

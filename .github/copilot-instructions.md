@@ -31,6 +31,8 @@
 
 ## 📋 **PROJECT STRUCTURE OVERVIEW**
 
+> **📋 Single Source of Truth**: For the most detailed and up-to-date repository structure, see [`docs/RepositoryStructure.md`](../docs/RepositoryStructure.md). This section provides a quick overview for AI assistants.
+
 ### **Current Organization:**
 
 ```text
@@ -119,7 +121,20 @@ CREATION: THINK → REASON → ACT → VERIFY → (iterate if needed)
 REVIEW:   OBSERVE → ANALYZE → REASON → VERIFY → ACT
 ```
 
-**See `.cursor/rules/01_educational-content-rules.mdc` for full CoT/ReAct details.**
+### **Reasoning in Educational Content:**
+
+**CRITICAL**: All code examples and explanations must show the "Why" behind decisions, not just the "What".
+
+**✅ DO**: Include explicit reasoning for code design decisions
+- Show why a data structure was chosen
+- Explain alternative approaches and trade-offs
+- Make the thought process visible to learners
+
+**❌ AVOID**: Stating facts without reasoning
+- Don't just say "use a dictionary" - explain WHY
+- Don't skip the reasoning chain from problem to solution
+
+**See `.cursor/rules/01_educational-content-rules.mdc` for full CoT/ReAct details and reasoning examples.**
 
 ---
 
@@ -183,12 +198,28 @@ print("🚀 Advanced Python Preview")
 
 ### **Link Corrections:**
 ```markdown
-# OLD
+# OLD (incorrect)
 [Session 1](docs/sessions/S1.md)
-
-# NEW
 [Session 1](docs/sessions/L1/S1.md)
+
+# NEW (correct)
+[Session 1](docs/sessions/L1/01_S1.md)
 ```
+
+### **File Reference Validation:**
+
+**CRITICAL**: All file references must:
+- ✅ Include numeric prefixes (`01_`, `02_`, etc.) in file names
+- ✅ Use correct `L{level}/S{session}/` directory structure
+- ✅ Match actual file names exactly
+- ✅ Be verified before committing
+
+**Common Errors to Avoid:**
+- ❌ Missing numeric prefixes: `S1.md` → ✅ `01_S1.md`
+- ❌ Missing level identifier: `sessions/S1/` → ✅ `sessions/L1/01_S1.md`
+- ❌ Incorrect path structure: `src/S1/` → ✅ `src/L1/S1/`
+
+**See `.cursor/rules/04_markdown-standards.mdc` for detailed file reference validation patterns.**
 
 ---
 
@@ -198,10 +229,14 @@ Before submitting any changes, verify:
 
 - [ ] **Content preserved** - No educational material lost
 - [ ] **Structure intact** - Formatting and organization maintained
-- [ ] **Links work** - All file references are correct
+- [ ] **Links work** - All file references are correct (include numeric prefixes)
+- [ ] **File references validated** - All references use `L{level}/S{session}/` structure
 - [ ] **Code examples** - All Python code is syntactically correct
+- [ ] **Reasoning quality** - Code design decisions include explicit reasoning (why this approach?)
 - [ ] **Consistency** - Changes align with overall project structure
 - [ ] **Readability** - Changes improve rather than degrade clarity
+
+**See `.cursor/rules/03_quality-assurance.mdc` for complete quality checklist.**
 
 ---
 
@@ -251,13 +286,17 @@ Before submitting any changes, verify:
 
 ## 🔗 **Related Documentation**
 
+- **📋 Repository Structure (Single Source of Truth)**: [`docs/RepositoryStructure.md`](../docs/RepositoryStructure.md) - **Authoritative repository structure documentation**
 - **Cursor AI Rules**: `.cursor/rules/` - Comprehensive modular rules for Cursor AI
   - See `.cursor/rules/README.md` for overview of all rule files
   - Rules cover: educational content, repository structure, quality assurance, markdown standards, primary directives, cross-level integration
 - **Main README**: `README.md` - Project overview and quick start guide
 - **Level 1 Plan**: `docs/sessions/L1/_Plan.md` - Complete Level 1 curriculum plan
 
-**Note**: `.cursor/rules/` and `.github/copilot-instructions.md` should be kept in sync. Both provide guidance for AI assistants working with this repository.
+**Note**: 
+- `docs/RepositoryStructure.md` is the **single source of truth** for repository structure
+- `.cursor/rules/` and `.github/copilot-instructions.md` should reference `docs/RepositoryStructure.md` for structure details
+- Both provide guidance for AI assistants working with this repository
 
 ---
 

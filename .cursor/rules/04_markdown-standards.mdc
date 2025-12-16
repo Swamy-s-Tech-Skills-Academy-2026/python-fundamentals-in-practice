@@ -126,6 +126,7 @@ Before finalizing session documentation:
 ```markdown
 # WRONG - Incorrect path format
 [Session 1](docs/sessions/S1.md)
+[Session 1](docs/sessions/L1/S1.md)
 [Practice File](src/S1/01_hello.py)
 ```
 
@@ -139,7 +140,7 @@ Before finalizing session documentation:
 
 ```markdown
 # CORRECT - Proper path format
-[Session 1](docs/sessions/L1/S1.md)
+[Session 1](docs/sessions/L1/01_S1.md)
 [Practice File](src/L1/S1/01_hello.py)
 ```
 
@@ -167,14 +168,64 @@ Before finalizing session documentation:
 `src/L1/S1/01_hello.py`, `src/L1/S1/02_interactive_hello.py`
 ```
 
+#### ❌ **ERROR: Missing Numeric Prefixes**
+
+**Problem Pattern:**
+
+```markdown
+# WRONG - Missing numeric prefix in reference
+[Session 1](docs/sessions/L1/S1.md)
+🧪 *Practice Files*: `src/L1/S1/hello.py`
+```
+
+**Root Cause:**
+
+- References don't include numeric prefixes (`01_`, `02_`, etc.)
+- File names in references don't match actual file names
+- Need to use exact file names including prefixes
+
+**Correct Format:**
+
+```markdown
+# CORRECT - Includes numeric prefixes
+[Session 1](docs/sessions/L1/01_S1.md)
+🧪 *Practice Files*: `src/L1/S1/01_hello.py`
+```
+
+#### ❌ **ERROR: Incorrect Level/Session Structure**
+
+**Problem Pattern:**
+
+```markdown
+# WRONG - Missing level or session in path
+[Session 2](docs/sessions/02_S2.md)
+[Practice File](src/S2/01_variables.py)
+```
+
+**Root Cause:**
+
+- Paths don't include level identifier (`L1/`, `L2/`, etc.)
+- Missing session directory in practice file paths
+- Not following `L{level}/S{session}/` structure
+
+**Correct Format:**
+
+```markdown
+# CORRECT - Full level/session structure
+[Session 2](docs/sessions/L1/02_S2.md)
+[Practice File](src/L1/S2/01_variables.py)
+```
+
 ### File Reference Rules
 
 1. ✅ **Always verify file exists** before adding reference
-2. ✅ **Use exact file names** - match actual file names exactly
+2. ✅ **Use exact file names** - match actual file names exactly (including `01_`, `02_` prefixes)
 3. ✅ **Use correct paths** - `src/L{level}/S{session}/` and `docs/sessions/L{level}/`
-4. ✅ **Test references** - verify all links work in markdown preview
-5. ✅ **Update all references** - when renaming/moving files, update ALL references immediately
-6. ✅ **Use relative paths correctly** - ensure paths resolve from current file location
+4. ✅ **Include numeric prefixes** - All file references must include numeric prefixes (`01_`, `02_`, etc.)
+5. ✅ **Test references** - verify all links work in markdown preview
+6. ✅ **Update all references** - when renaming/moving files, update ALL references immediately
+7. ✅ **Use relative paths correctly** - ensure paths resolve from current file location
+8. ✅ **Check after file operations** - After renaming, splitting, or moving files, validate all references
 
 ### Reference Patterns
 
@@ -188,8 +239,8 @@ Before finalizing session documentation:
 **When referencing session documentation:**
 
 ```markdown
-[Session 1](docs/sessions/L1/S1.md)
-[Level 1 Plan](docs/sessions/L1/Plan.md)
+[Session 1](docs/sessions/L1/01_S1.md)
+[Level 1 Plan](docs/sessions/L1/_Plan.md)
 ```
 
 **When referencing images:**
@@ -203,10 +254,36 @@ Before finalizing session documentation:
 Before committing any file with references:
 
 1. ✅ **Check file exists**: Verify each referenced file exists in the expected location
-2. ✅ **Test navigation**: Click links in markdown preview to verify they work
-3. ✅ **Update after changes**: If you rename/move files, update ALL references immediately
-4. ✅ **Use correct paths**: Relative paths must resolve from current file's directory
-5. ✅ **Run link checker**: Use lychee with `lychee.toml` configuration
+2. ✅ **Verify file names match exactly**: Check numeric prefixes (`01_`, `02_`, etc.) are included
+3. ✅ **Test navigation**: Click links in markdown preview to verify they work
+4. ✅ **Update after changes**: If you rename/move files, update ALL references immediately
+5. ✅ **Use correct paths**: Relative paths must resolve from current file's directory
+6. ✅ **Check level/session structure**: Ensure `L{level}/S{session}/` format is used correctly
+7. ✅ **Run link checker**: Use lychee with `lychee.toml` configuration
+
+### File Reference Prevention Guidelines
+
+**When creating new files:**
+
+1. Check if file already exists with similar name
+2. Use consistent naming: `01_name.py`, `02_name.py`, etc.
+3. Verify directory structure: `L{level}/S{session}/`
+4. Document file references as you create them
+
+**When renaming files:**
+
+1. Find all references: Search for old filename in documentation
+2. Update all references to include new name with numeric prefix
+3. Test navigation manually
+4. Run link checker to verify
+
+**When splitting files:**
+
+1. Create new part files with proper naming
+2. **IMMEDIATELY** find all references to original file
+3. Update ALL references to point to correct part files
+4. Test navigation manually
+5. Run link checker to verify
 
 ### Automated Validation
 

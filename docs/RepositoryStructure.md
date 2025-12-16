@@ -1,5 +1,7 @@
 # 📋 Repository Structure
 
+> **🎯 Single Source of Truth**: This document (`docs/RepositoryStructure.md`) is the **authoritative source** for repository structure information. Other files (`.cursor/rules/`, `.github/copilot-instructions.md`) reference this document for structure details.
+
 This document provides a detailed overview of the Python Fundamentals repository structure.
 
 ---
