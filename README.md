@@ -2,8 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
-![Python](https://img.shields.io/badge/Python-3.13+-3776AB?logo=python&logoColor=white)
-![Educational](https://img.shields.io/badge/Educational-Course-FF6B6B)
+![Python](https://img.shields.io/badge/Python-3.13+-44CC11?logo=python&logoColor=white)
+![Educational](https://img.shields.io/badge/Educational-Course-3B82F6)
 ![Meetup](https://img.shields.io/badge/Meetup-Series-ED1C40?logo=meetup&logoColor=white)
 
 A comprehensive, transformation-focused Python curriculum designed to take you from complete beginner to confident Python programmer through 9 progressive levels.
@@ -107,6 +107,7 @@ For a detailed repository structure, see **[Repository Structure](docs/Repositor
 - 📖 **Python.org Beginner's Guide:** [python.org/about/gettingstarted](https://python.org/about/gettingstarted/)
 - 🎥 **Python Installation Video:** Search "Python installation [your OS]"
 - 💬 **Community:** r/learnpython, Python Discord, Stack Overflow
+- 🎥 **Video Playlist – Level 1 (Noob → Nerd)**: [Python Fundamentals – Level 1 (YouTube playlist)](https://www.youtube.com/watch?v=Cy6DqbRjsF0&list=PLdLQDTLMjAzpRBxP4q1XJOuLhFG4pSfBB)
 
 ---
 
