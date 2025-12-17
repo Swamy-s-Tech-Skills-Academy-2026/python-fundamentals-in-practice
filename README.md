@@ -28,17 +28,17 @@ For a detailed repository structure, see **[Repository Structure](docs/Repositor
 
 ## 🎯 **The 9-Level Python Journey**
 
-| Level | Journey Stage                  | Focus                                                                                       | Status             |
-| ----- | ------------------------------ | ------------------------------------------------------------------------------------------- | ------------------ |
+| Level | Journey Stage                  | Focus                                                                                                  | Status             |
+| ----- | ------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------ |
 | 1     | Noob → Nerd                    | _Environment setup, Python introduction, first scripts_. 📋 **[View Plan](docs/sessions/L1/_Plan.md)** | 🚧 **In Progress** |
-| 2     | Nerd → Novice                  | _Curriculum under development_                                                              | ⏭️ Coming Next     |
-| 3     | Novice → Learner               | _Curriculum under development_                                                              | 🔄 Future          |
-| 4     | Learner → Beginner             | _Curriculum under development_                                                              | 🔄 Future          |
-| 5     | Beginner → Practitioner        | _Curriculum under development_                                                              | 🔄 Future          |
-| 6     | Practitioner → Skilled Coder   | _Curriculum under development_                                                              | 🔄 Future          |
-| 7     | Skilled Coder → Specialist     | _Curriculum under development_                                                              | 🔄 Future          |
-| 8     | Specialist → Professional      | _Curriculum under development_                                                              | 🔄 Future          |
-| 9     | Professional → Curious Learner | _Curriculum under development_                                                              | 🔄 Future          |
+| 2     | Nerd → Novice                  | _Curriculum under development_                                                                         | ⏭️ Coming Next     |
+| 3     | Novice → Learner               | _Curriculum under development_                                                                         | 🔄 Future          |
+| 4     | Learner → Beginner             | _Curriculum under development_                                                                         | 🔄 Future          |
+| 5     | Beginner → Practitioner        | _Curriculum under development_                                                                         | 🔄 Future          |
+| 6     | Practitioner → Skilled Coder   | _Curriculum under development_                                                                         | 🔄 Future          |
+| 7     | Skilled Coder → Specialist     | _Curriculum under development_                                                                         | 🔄 Future          |
+| 8     | Specialist → Professional      | _Curriculum under development_                                                                         | 🔄 Future          |
+| 9     | Professional → Curious Learner | _Curriculum under development_                                                                         | 🔄 Future          |
 
 ---
 
