@@ -137,16 +137,23 @@ Cursor AI configuration:
 
 ### Level 1 (Noob → Nerd) - 🚧 In Progress
 
-| # | File | Topic | Practice Files |
-|---|------|-------|----------------|
-| - | `_Plan.md` | Level Overview | - |
-| 1 | `01_S1.md` | Python Introduction & Environment | 3 files |
+| #   | File        | Topic                               | Practice Files |
+| --- | ----------- | ----------------------------------- | -------------- |
+| -   | `_Plan.md`  | Level Overview                      | -              |
+| 1   | `01_S1.md`  | Python Introduction & Environment   | 3 files        |
+| 2   | `02_S2.md`  | Variables & Data Types              | 3 files        |
 
 **Practice Files in S1:**
 
 - `01_hello.py` - Basic output and comments
 - `02_interactive_hello.py` - User input and f-strings
 - `bytecode_demo.py` - Python compilation demonstration
+
+**Practice Files in S2:**
+
+- `01_variables.py` - Variable basics and naming
+- `02_data_types.py` - Python data types exploration
+- `03_type_conversion.py` - Type conversion examples
 
 ### Future Sessions & Levels
 

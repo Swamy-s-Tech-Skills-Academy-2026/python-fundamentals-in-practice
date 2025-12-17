@@ -9,6 +9,7 @@
 ## 🚨 **CRITICAL RULES - READ FIRST**
 
 ### **1. 🛡️ DO NOT CORRUPT EXISTING FILES**
+
 - **NEVER** make changes that break existing content
 - **ALWAYS** preserve the original structure and formatting
 - **VERIFY** changes are minimal and necessary before applying
@@ -16,12 +17,14 @@
 - **ASK FOR CONFIRMATION** if changes seem extensive or risky
 
 ### **2. 📖 UNDERSTAND BEFORE ACTING**
+
 - **READ** the entire file or section before making any edits
 - **ANALYZE** the existing structure and content quality
 - **RESPECT** the pedagogical flow and curriculum design
 - **PRESERVE** all educational content, examples, and explanations
 
 ### **3. 🎯 MAKE PRECISE, TARGETED CHANGES**
+
 - **IDENTIFY** the exact issue to be fixed
 - **ISOLATE** the specific text that needs modification
 - **MINIMIZE** the scope of changes
@@ -79,6 +82,7 @@ python-fundamentals/
 ## 🎓 **CURRICULUM PHILOSOPHY**
 
 ### **Educational Approach:**
+
 - **30-minute sessions** - Realistic time constraints
 - **Progressive complexity** - Each session builds on previous
 - **Hands-on practice** - Every concept has practical application
@@ -86,6 +90,7 @@ python-fundamentals/
 - **Beginner-focused** - No assumptions about prior knowledge
 
 ### **Content Quality Standards:**
+
 - **Pedagogically sound** - Based on learning theory
 - **Technically accurate** - All code examples work correctly
 - **Professionally presented** - Industry-standard documentation
@@ -97,22 +102,22 @@ python-fundamentals/
 
 ### **For Content CREATION (THINK → REASON → ACT → VERIFY):**
 
-| Phase | Steps |
-|-------|-------|
-| **THINK** | Understand objective → Decompose into chunks → Sequence logically → Anticipate misconceptions |
-| **REASON** | Check prerequisites → Map connections → Design examples → Identify pitfalls |
-| **ACT** | Write content → Create code examples → Add diagrams → Design exercises |
-| **VERIFY** | Is it clear? → Complete? → Progressive? → Original? |
+| Phase      | Steps                                                                                         |
+| ---------- | --------------------------------------------------------------------------------------------- |
+| **THINK**  | Understand objective → Decompose into chunks → Sequence logically → Anticipate misconceptions |
+| **REASON** | Check prerequisites → Map connections → Design examples → Identify pitfalls                   |
+| **ACT**    | Write content → Create code examples → Add diagrams → Design exercises                        |
+| **VERIFY** | Is it clear? → Complete? → Progressive? → Original?                                           |
 
 ### **For Content REVIEW (OBSERVE → ANALYZE → REASON → VERIFY → ACT):**
 
-| Phase | Steps |
-|-------|-------|
-| **OBSERVE** | Scan and catalog ALL files in scope |
-| **ANALYZE** | Open and examine EVERY file individually |
-| **REASON** | Apply logical reasoning to identify issues |
-| **VERIFY** | Cross-check findings and validate compliance |
-| **ACT** | Document findings and update content |
+| Phase       | Steps                                         |
+| ----------- | --------------------------------------------- |
+| **OBSERVE** | Scan and catalog ALL files in scope           |
+| **ANALYZE** | Open and examine EVERY file individually      |
+| **REASON**  | Apply logical reasoning to identify issues    |
+| **VERIFY**  | Cross-check findings and validate compliance  |
+| **ACT**     | Document findings and update content          |
 
 ### **Decision Framework:**
 
@@ -126,11 +131,13 @@ REVIEW:   OBSERVE → ANALYZE → REASON → VERIFY → ACT
 **CRITICAL**: All code examples and explanations must show the "Why" behind decisions, not just the "What".
 
 **✅ DO**: Include explicit reasoning for code design decisions
+
 - Show why a data structure was chosen
 - Explain alternative approaches and trade-offs
 - Make the thought process visible to learners
 
 **❌ AVOID**: Stating facts without reasoning
+
 - Don't just say "use a dictionary" - explain WHY
 - Don't skip the reasoning chain from problem to solution
 
@@ -143,6 +150,7 @@ REVIEW:   OBSERVE → ANALYZE → REASON → VERIFY → ACT
 ### **When Making Changes:**
 
 #### **✅ SAFE EDITS:**
+
 - Fixing typos and spelling errors
 - Correcting broken links
 - Updating file paths that are demonstrably wrong
@@ -150,12 +158,14 @@ REVIEW:   OBSERVE → ANALYZE → REASON → VERIFY → ACT
 - Adding missing sections that are clearly incomplete
 
 #### **⚠️ CAREFUL EDITS:**
+
 - Modifying code examples (ensure they still work)
 - Changing file structure references
 - Updating installation instructions
 - Modifying pedagogical explanations
 
 #### **🚫 AVOID:**
+
 - Large-scale content reorganization without explicit request
 - Changing the pedagogical approach or learning sequence
 - Removing or significantly altering existing explanations
@@ -163,6 +173,7 @@ REVIEW:   OBSERVE → ANALYZE → REASON → VERIFY → ACT
 - Changing the emoji-based navigation system
 
 ### **Before Any Edit:**
+
 1. **Read the full context** - Understand what you're changing
 2. **Identify the specific problem** - What exactly needs fixing?
 3. **Plan minimal changes** - What's the smallest fix that works?
@@ -170,6 +181,7 @@ REVIEW:   OBSERVE → ANALYZE → REASON → VERIFY → ACT
 5. **Verify the change makes sense** - Does it improve the content?
 
 ### **File Path Corrections:**
+
 - Current structure uses `L1/S1/` hierarchy
 - Update references from old `S1/` to new `L1/S1/` structure
 - Maintain consistency between documentation and code locations
@@ -179,6 +191,7 @@ REVIEW:   OBSERVE → ANALYZE → REASON → VERIFY → ACT
 ## 📝 **COMMON TASKS**
 
 ### **Path Updates:**
+
 ```markdown
 # OLD (incorrect)
 src/S1/01_hello.py
@@ -188,6 +201,7 @@ src/L1/S1/01_hello.py
 ```
 
 ### **Character Encoding Fixes:**
+
 ```markdown
 # BROKEN
 print("🚀 Advanced Python Preview")
@@ -197,6 +211,7 @@ print("🚀 Advanced Python Preview")
 ```
 
 ### **Link Corrections:**
+
 ```markdown
 # OLD (incorrect)
 [Session 1](docs/sessions/S1.md)
@@ -209,12 +224,14 @@ print("🚀 Advanced Python Preview")
 ### **File Reference Validation:**
 
 **CRITICAL**: All file references must:
+
 - ✅ Include numeric prefixes (`01_`, `02_`, etc.) in file names
 - ✅ Use correct `L{level}/S{session}/` directory structure
 - ✅ Match actual file names exactly
 - ✅ Be verified before committing
 
 **Common Errors to Avoid:**
+
 - ❌ Missing numeric prefixes: `S1.md` → ✅ `01_S1.md`
 - ❌ Missing level identifier: `sessions/S1/` → ✅ `sessions/L1/01_S1.md`
 - ❌ Incorrect path structure: `src/S1/` → ✅ `src/L1/S1/`
@@ -243,12 +260,14 @@ Before submitting any changes, verify:
 ## 🚨 **EMERGENCY PROCEDURES**
 
 ### **If You Accidentally Corrupt Content:**
+
 1. **STOP immediately** - Don't make additional changes
 2. **INFORM the user** - Be transparent about what happened
 3. **SUGGEST restoration** - Recommend reverting to previous version
 4. **LEARN from the mistake** - Understand what went wrong
 
 ### **If Unsure About Changes:**
+
 1. **ASK for clarification** - Better to check than assume
 2. **DESCRIBE your plan** - Explain what you intend to change
 3. **REQUEST confirmation** - Get approval before proceeding
@@ -269,6 +288,7 @@ Before submitting any changes, verify:
 ## 📞 **WHEN IN DOUBT**
 
 **ALWAYS:**
+
 - Read more context
 - Ask for clarification  
 - Make smaller changes
@@ -276,6 +296,7 @@ Before submitting any changes, verify:
 - Communicate your concerns
 
 **NEVER:**
+
 - Make assumptions about what's needed
 - Change content you don't fully understand
 - Rush through complex modifications
@@ -293,7 +314,8 @@ Before submitting any changes, verify:
 - **Main README**: `README.md` - Project overview and quick start guide
 - **Level 1 Plan**: `docs/sessions/L1/_Plan.md` - Complete Level 1 curriculum plan
 
-**Note**: 
+**Note**:
+
 - `docs/RepositoryStructure.md` is the **single source of truth** for repository structure
 - `.cursor/rules/` and `.github/copilot-instructions.md` should reference `docs/RepositoryStructure.md` for structure details
 - Both provide guidance for AI assistants working with this repository
