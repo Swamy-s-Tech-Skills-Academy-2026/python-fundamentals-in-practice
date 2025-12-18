@@ -46,44 +46,16 @@
 
 ## 📋 **PROJECT STRUCTURE OVERVIEW**
 
-> **📋 Single Source of Truth**: For the most detailed and up-to-date repository structure, see [`docs/02_RepositoryStructure.md`](../docs/02_RepositoryStructure.md). This section provides a quick overview for AI assistants.
+> **📋 Single Source of Truth**: For the complete and up-to-date repository structure, see [`docs/02_RepositoryStructure.md`](../docs/02_RepositoryStructure.md). This is the authoritative documentation for all repository structure details.
 
-### **Current Organization:**
+**Quick Reference:**
 
-```text
-python-fundamentals/
-├── docs/
-│   ├── images/              # Educational images and screenshots
-│   │   └── S1/              # Session 1 images
-│   ├── 02_RepositoryStructure.md
-│   └── sessions/
-│       └── L1/              # Level 1: Noob → Nerd
-│           ├── _Plan.md     # Overall Level 1 curriculum plan (sorts first)
-│           ├── 01_S1.md     # Session 1: Environment & Setup
-│           ├── 02_S2.md     # Session 2: Variables & Data Types
-│           ├── 03_S3.md     # Session 3: Operators & Expressions
-│           ├── 04_S4.md     # Session 4: Conditionals & Modules
-│           ├── 05_MP1.md    # Mini Project 1: Simple Calculator
-│           ├── 06_S5.md     # Session 5: Loops & Iteration
-│           ├── 07_S6.md     # Session 6: Debugging & Built-ins
-│           ├── 08_S7.md     # Session 7: Lists & Loops
-│           ├── 09_S8.md     # Session 8: Dictionaries & Testing
-│           └── 10_MP2.md    # Mini Project 2: Profile Generator
-├── src/
-│   └── L1/
-│       ├── S1/              # Session 1 practice files
-│       │   ├── 01_hello.py
-│       │   ├── 02_interactive_hello.py
-│       │   └── bytecode_demo.py
-│       ├── S2/ ... S8/      # Session 2-8 practice files
-│       ├── MP1/             # Mini Project 1 files
-│       │   └── simple_calculator.py
-│       └── MP2/             # Mini Project 2 files
-│           └── profile_generator.py
-└── README.md                # Project overview and quick start
-```
+- **Documentation**: `docs/sessions/L{level}/` - Session documentation organized by level
+- **Practice Code**: `src/L{level}/S{session}/` - Python practice files organized by level and session
+- **Images**: `docs/images/S{session}/` - Educational images organized by session
+- **Scripts**: `scripts/` - PowerShell utility scripts for development
 
-### **File Relationships:**
+**File Relationships:**
 
 - `docs/sessions/L1/01_S1.md` ↔ `src/L1/S1/` (practice files)
 - `docs/sessions/L1/_Plan.md` → Overall curriculum structure
