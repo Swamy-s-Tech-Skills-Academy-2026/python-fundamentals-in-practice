@@ -51,10 +51,19 @@ python-fundamentals/
 ├── ⚙️ .github/                  # GitHub configuration
 │   ├── workflows/
 │   │   └── docs-quality.yml    # CI/CD for documentation quality
+│   ├── ISSUE_TEMPLATE/         # Issue templates
+│   │   ├── bug_report.md
+│   │   ├── feature_request.md
+│   │   ├── documentation_improvement.md
+│   │   └── config.yml
 │   ├── prompts/                # GitHub Copilot prompts
-│   └── copilot-instructions.md
+│   ├── copilot-instructions.md
+│   └── pull_request_template.md # PR template
 ├── 📄 README.md                # Main project README
 ├── 📄 LICENSE                  # MIT License
+├── 📄 CONTRIBUTING.md          # Contributing guidelines
+├── 📄 CODE_OF_CONDUCT.md       # Code of conduct
+├── 📄 SECURITY.md              # Security policy
 └── 📋 Configuration files      # .markdownlint*, lychee.toml, .gitignore
 ```
 
@@ -101,8 +110,14 @@ GitHub configuration:
 
 - **`workflows/`**: CI/CD pipelines for quality assurance
   - `docs-quality.yml`: Documentation quality checks
+- **`ISSUE_TEMPLATE/`**: Issue templates for bug reports, feature requests, and documentation improvements
+  - `bug_report.md`: Template for reporting bugs
+  - `feature_request.md`: Template for requesting features
+  - `documentation_improvement.md`: Template for documentation suggestions
+  - `config.yml`: Issue template configuration
 - **`prompts/`**: GitHub Copilot prompts
 - **`copilot-instructions.md`**: AI assistant guidelines for GitHub Copilot
+- **`pull_request_template.md`**: Template for pull requests with quality checklist
 
 ### `.cursor/`
 
@@ -116,6 +131,16 @@ Cursor AI configuration:
   - `05_primary-directives.mdc`: Primary directives for AI assistants
   - `06_cross-level-integration.mdc`: Cross-level content integration
   - `README.md`: Overview of rule files
+
+### Root Level Files
+
+Community and project documentation:
+
+- **`README.md`**: Main project README with quick start guide and repository overview
+- **`LICENSE`**: MIT License
+- **`CONTRIBUTING.md`**: Contributing guidelines aligned with educational content rules and quality standards
+- **`CODE_OF_CONDUCT.md`**: Community code of conduct for a welcoming, inclusive learning environment
+- **`SECURITY.md`**: Security policy for responsible disclosure of vulnerabilities
 
 ---
 
@@ -198,7 +223,7 @@ Cursor AI configuration:
 
 ### Future Sessions & Levels
 
-- 🔄 **Level 1 Sessions 2-10**: Planned for future development
+- 🔄 **Level 1 Sessions 3-10**: Planned for future development
 - 🔄 **Level 2-9**: Planned for future development
 
 ---
