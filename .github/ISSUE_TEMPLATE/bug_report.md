@@ -15,13 +15,15 @@ A clear and concise description of what the bug is.
 ## 📍 Location
 
 **File(s) affected:**
+
 - [ ] Documentation: `docs/...`
 - [ ] Practice code: `src/...`
 - [ ] Configuration: `.github/...`, `.cursor/...`
 - [ ] Other: `...`
 
 **Specific file(s):**
-```
+
+```text
 (e.g., docs/sessions/L1/01_S1.md, src/L1/S1/01_hello.py)
 ```
 

@@ -9,6 +9,7 @@ assignees: ''
 ## 📝 Documentation Issue
 
 **What needs improvement?**
+
 - [ ] Unclear explanation
 - [ ] Missing information
 - [ ] Typo or grammar error
@@ -22,12 +23,14 @@ assignees: ''
 ## 📍 Location
 
 **File(s) affected:**
-```
+
+```text
 (e.g., docs/sessions/L1/01_S1.md, README.md, docs/01_Python-Fundamentals-MasterPlan.md)
 ```
 
 **Specific section:**
-```
+
+```text
 (e.g., "Part 3: How Python Works", "Practice Files section")
 ```
 
@@ -36,7 +39,8 @@ assignees: ''
 ## 🔍 Current Content
 
 **What does it currently say?**
-```
+
+```text
 (Paste the relevant section or describe it)
 ```
 
@@ -45,11 +49,13 @@ assignees: ''
 ## 💡 Suggested Improvement
 
 **What should it say instead?**
-```
+
+```text
 (Describe or paste your suggested improvement)
 ```
 
 **Why is this better?**
+
 - More clear for beginners?
 - More accurate?
 - Better examples?
@@ -60,6 +66,7 @@ assignees: ''
 ## 🎯 Learning Impact
 
 **How does this affect learners?**
+
 - Does this clarify a confusing concept?
 - Does this fix a common misconception?
 - Does this make the content more accessible?
@@ -71,7 +78,7 @@ assignees: ''
 - [ ] I've checked that this hasn't been reported before
 - [ ] I've verified the file exists and the content is accurate
 - [ ] I've considered how this change affects the learning flow
-- [ ] I've read the [Educational Content Rules](.cursor/rules/01_educational-content-rules.mdc)
+- [ ] I've read the [Educational Content Rules](../../.cursor/rules/01_educational-content-rules.mdc)
 
 ---
 
