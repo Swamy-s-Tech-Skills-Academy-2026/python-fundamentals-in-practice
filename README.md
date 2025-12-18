@@ -14,9 +14,25 @@ A comprehensive, transformation-focused Python curriculum designed to take you f
 
 ## 🚀 **Quick Start**
 
-- **📋 Master Plan:** [docs/01_Python-Fundamentals-MasterPlan.md](docs/01_Python-Fundamentals-MasterPlan.md) - Complete curriculum overview
-- **📖 Level 1 Plan:** [docs/sessions/L1/_Plan.md](docs/sessions/L1/_Plan.md) - Start here for Level 1
-- **📁 Repository Structure:** [docs/02_RepositoryStructure.md](docs/02_RepositoryStructure.md) - Detailed structure guide
+**New to Python?** Start your journey here:
+
+1. **📖 [Level 1 Plan](docs/sessions/L1/_Plan.md)** - Begin with Level 1: Noob → Nerd
+   - Complete guide with 10 sessions (Sessions 1-2 available now)
+   - Hands-on practice files and mini projects
+   - Step-by-step learning path
+
+2. **📋 [Master Plan](docs/01_Python-Fundamentals-MasterPlan.md)** - Explore the complete 9-level curriculum
+   - See the full transformation journey
+   - Understand learning progression
+   - Check implementation status
+
+3. **🎥 [Watch Level 1 Playlist](https://www.youtube.com/watch?v=Cy6DqbRjsF0&list=PLdLQDTLMjAzpRBxP4q1XJOuLhFG4pSfBB)** - Video walkthroughs for Level 1 sessions
+   - Follow along with live coding
+   - Visual explanations and demonstrations
+
+**For Contributors & Developers:**
+
+- **📁 [Repository Structure](docs/02_RepositoryStructure.md)** - Detailed structure guide and file organization
 
 ---
 
