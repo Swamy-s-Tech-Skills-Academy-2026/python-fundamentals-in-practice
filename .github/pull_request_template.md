@@ -134,4 +134,3 @@ Add screenshots to help explain your changes.
 ---
 
 **Thank you for contributing to Python Fundamentals!** 🐍✨
-

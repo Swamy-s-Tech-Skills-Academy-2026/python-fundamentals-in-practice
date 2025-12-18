@@ -89,4 +89,3 @@ If relevant, add screenshots showing the current content.
 ---
 
 **Thank you for helping improve our documentation!**
-

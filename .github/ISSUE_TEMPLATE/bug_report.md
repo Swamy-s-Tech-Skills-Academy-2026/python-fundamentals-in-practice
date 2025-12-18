@@ -73,4 +73,3 @@ If applicable, add screenshots to help explain the problem.
 ---
 
 **Thank you for helping improve Python Fundamentals!**
-
