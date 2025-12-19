@@ -20,7 +20,8 @@ python-fundamentals/
 │   │   └── L1/                 # Level 1: Noob → Nerd
 │   │       ├── _Plan.md        # Complete Level 1 curriculum plan (sorts first)
 │   │       ├── 01_S1.md        # Session 1: Python Introduction & Environment
-│   │       └── 02_S2.md        # Session 2: Variables & Data Types
+│   │       ├── 02_S2.md        # Session 2: Variables & Data Types
+│   │       └── 03_S3.md        # Session 3: Operators & Expressions
 │   ├── 01_Python-Fundamentals-MasterPlan.md  # Overall curriculum master plan
 │   └── 02_RepositoryStructure.md  # This file (single source of truth)
 ├── 💻 src/
@@ -29,10 +30,14 @@ python-fundamentals/
 │   │   │   ├── 01_hello.py
 │   │   │   ├── 02_interactive_hello.py
 │   │   │   └── bytecode_demo.py
-│   │   └── S2/                 # Session 2 practice files
-│   │       ├── 01_variables.py
-│   │       ├── 02_data_types.py
-│   │       └── 03_type_conversion.py
+│   │   ├── S2/                 # Session 2 practice files
+│   │   │   ├── 01_variables.py
+│   │   │   ├── 02_data_types.py
+│   │   │   └── 03_type_conversion.py
+│   │   └── S3/                 # Session 3 practice files
+│   │       ├── 01_arithmetic.py
+│   │       ├── 02_comparisons.py
+│   │       └── 03_mini_calculator.py
 │   └── L2/                     # Level 2 (future)
 ├── 🔧 scripts/                 # Development and utility scripts
 │   ├── docs-lint.ps1           # Markdown linting script
@@ -64,6 +69,7 @@ python-fundamentals/
 ├── 📄 CONTRIBUTING.md          # Contributing guidelines
 ├── 📄 CODE_OF_CONDUCT.md       # Code of conduct
 ├── 📄 SECURITY.md              # Security policy
+├── 📁 source-material/        # Reference materials (archive/notes)
 └── 📋 Configuration files      # .markdownlint*, lychee.toml, .gitignore
 ```
 
@@ -75,14 +81,15 @@ python-fundamentals/
 
 Contains all educational documentation:
 
-- **`images/`**: Educational images organized by session (S1, S2, etc.)
+- **`images/`**: Educational images organized by session (S1, S2, S3, etc.)
+  - Currently contains images for Session 1 (Help_V1.PNG, Help_V2.PNG, Py_Source_ByteCode.PNG)
 - **`meetup/`**: Meetup event descriptions organized by level
   - `L1/meetup-sessions.md`: Session descriptions for Meetup.com
 - **`sessions/`**: Session documentation organized by level (L1, L2, etc.)
   - Each level contains:
     - `_Plan.md`: Complete level curriculum plan (underscore sorts first)
-    - `01_S1.md`, `02_S2.md`, etc.: Numbered session documentation
-    - `05_MP1.md`, `10_MP2.md`: Mini project documentation
+    - `01_S1.md`, `02_S2.md`, `03_S3.md`, etc.: Numbered session documentation
+    - `05_MP1.md`, `10_MP2.md`: Mini project documentation (future)
 - **`01_Python-Fundamentals-MasterPlan.md`**: Overall curriculum master plan
 - **`02_RepositoryStructure.md`**: This file (single source of truth for structure)
 
@@ -141,6 +148,7 @@ Community and project documentation:
 - **`CONTRIBUTING.md`**: Contributing guidelines aligned with educational content rules and quality standards
 - **`CODE_OF_CONDUCT.md`**: Community code of conduct for a welcoming, inclusive learning environment
 - **`SECURITY.md`**: Security policy for responsible disclosure of vulnerabilities
+- **`source-material/`**: Reference materials and source content (archive/notes, not part of curriculum)
 
 ---
 
@@ -149,14 +157,14 @@ Community and project documentation:
 ### Python Practice Files
 
 - Format: `{number}_{descriptive_name}.py`
-- Examples: `01_hello.py`, `02_interactive_hello.py`, `03_type_conversion.py`
+- Examples: `01_hello.py`, `02_interactive_hello.py`, `03_type_conversion.py`, `01_arithmetic.py`, `02_comparisons.py`, `03_mini_calculator.py`
 - Location: `src/L{level}/S{session}/` or `src/L{level}/MP{number}/`
 
 ### Session Documentation
 
 - Format: `{number}_S{session}.md` or `{number}_MP{number}.md` (for future sessions)
 - Plan: `_Plan.md` (underscore prefix sorts first)
-- Examples: `01_S1.md`, `02_S2.md`, `_Plan.md` (currently available)
+- Examples: `01_S1.md`, `02_S2.md`, `03_S3.md`, `_Plan.md` (currently available)
 - Location: `docs/sessions/L{level}/`
 
 ### Meetup Descriptions
