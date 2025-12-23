@@ -1,8 +1,8 @@
 # Meetup Session: Python for Absolute Beginners - Level 1
 
-## Session 3: Operators & Expressions
+## Level 1 - Session 3: Operators & Expressions
 
-Date: (TBD - To be scheduled)  
+Date: 20-Dec-2025
 
 Event URL: (Meetup link will be updated here)  
 
@@ -10,7 +10,8 @@ Event URL: (Meetup link will be updated here)
 
 Level: Noob → Nerd (Level 1, Session 3)  
 Format: Live coding session with interactive Q&A  
-Prerequisites: Completed Session 2 (Variables & Data Types)
+Duration: 30 minutes
+Prerequisites: Completed Previous Sessions
 
 - Optional: Watch the recording/playlist: [Python Fundamentals – Level 1 (YouTube playlist)](https://www.youtube.com/watch?v=Cy6DqbRjsF0&list=PLdLQDTLMjAzpRBxP4q1XJOuLhFG4pSfBB)
 
@@ -45,7 +46,7 @@ Perfect For:
 
 ---
 
-## Session 2: Variables & Data Types
+## Level 1 - Session 2: Variables & Data Types
 
 Date: 17-Dec-2025  
 
@@ -90,7 +91,7 @@ Perfect For:
 
 ---
 
-## Session 1: Python Introduction & Environment Setup
+## Level 1 - Session 1: Python Introduction & Environment Setup
 
 Date: 14-Dec-2025
 
