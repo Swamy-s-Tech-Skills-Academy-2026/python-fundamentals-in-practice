@@ -62,6 +62,30 @@ For detailed repository structure, see **[Repository Structure](docs/02_Reposito
 
 ## 🛠️ **Development & Quality Assurance**
 
+### **Python & pip Usage (Windows)**
+
+On Windows, it’s usually safest to run pip through the Python launcher so you install packages into the Python you intend to use:
+
+```powershell
+# Show pip help / available options
+py -m pip
+```
+
+Example (install `uv`):
+
+```powershell
+py -m pip install uv
+```
+
+### **Developer Git Setup**
+
+To keep commit authorship consistent across machines, set your global Git identity once per machine:
+
+```bash
+git config --global user.email "yourname@youremail.com"
+git config --global user.name "Your Name"
+```
+
 ### **Documentation Quality Checks (Local)**
 
 Run Markdown lint against README and all documentation before opening a PR:
