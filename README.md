@@ -12,6 +12,12 @@ A comprehensive, transformation-focused Python curriculum designed to take you f
 
 ---
 
+## 📌 Disclaimer
+
+This is **Swamy's personal learning** repository, not official course material or a structured curriculum.
+
+---
+
 ## 🚀 **Quick Start**
 
 **New to Python?** Start your journey here:
