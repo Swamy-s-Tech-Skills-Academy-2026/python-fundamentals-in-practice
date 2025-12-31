@@ -1,14 +1,21 @@
 # 🐍 Python Fundamentals: From clueless to curious
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![Status](https://img.shields.io/badge/status-in%20progress-yellow)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 ![Python](https://img.shields.io/badge/Python-3.13+-44CC11?logo=python&logoColor=white)
 ![Educational](https://img.shields.io/badge/Educational-Course-3B82F6)
 ![Meetup](https://img.shields.io/badge/Meetup-Series-ED1C40?logo=meetup&logoColor=white)
+![Maintainer](https://img.shields.io/badge/Maintainer-Viswanatha%20Swamy%20P%20K-blue)
 
 A comprehensive, transformation-focused Python curriculum designed to take you from complete beginner to confident Python programmer through 9 progressive levels.
 
 > **Format:** Each level contains 5 hours of training (10 sessions × 30 minutes) culminating in 2 hands-on mini projects.
+
+---
+
+## 📌 Disclaimer
+
+This is **Swamy's personal learning** repository, not official course material or a structured curriculum.
 
 ---
 
@@ -54,6 +61,30 @@ For detailed repository structure, see **[Repository Structure](docs/02_Reposito
 ---
 
 ## 🛠️ **Development & Quality Assurance**
+
+### **Python & pip Usage (Windows)**
+
+On Windows, it’s usually safest to run pip through the Python launcher so you install packages into the Python you intend to use:
+
+```powershell
+# Show pip help / available options
+py -m pip
+```
+
+Example (install `uv`):
+
+```powershell
+py -m pip install uv
+```
+
+### **Developer Git Setup**
+
+To keep commit authorship consistent across machines, set your global Git identity once per machine:
+
+```bash
+git config --global user.email "yourname@youremail.com"
+git config --global user.name "Your Name"
+```
 
 ### **Documentation Quality Checks (Local)**
 
