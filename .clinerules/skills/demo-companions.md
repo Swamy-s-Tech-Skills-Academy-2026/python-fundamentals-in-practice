@@ -22,6 +22,15 @@ description: >-
 4. Flag orphan files under `src/L1` not referenced in session docs.
 5. New Level 1 content respects completed vs planned status in `docs/meetup/L1/sessions.md`.
 
+## Session bundle
+
+| Layer | Path | Contains |
+| --- | --- | --- |
+| Docs | `docs/sessions/L1/S{session}.md` | Teaching narrative, objectives, practice mapping |
+| Practice | `src/L1/S{session}/` | Runnable Python scripts |
+| Images | `docs/images/S{session}/` | Diagrams/screenshots when used |
+| Status | `docs/meetup/L1/sessions.md` | Placement guard for completed vs planned work |
+
 ## References
 
 - Structure: `docs/02_RepositoryStructure.md`

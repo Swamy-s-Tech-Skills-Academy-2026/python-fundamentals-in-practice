@@ -17,7 +17,7 @@ This folder adapts the repository's agent governance for Cline. It is a tool-fac
 
 ## Bundled Skills
 
-- `python-fundamentals-curriculum`
+- `agentic-engineering`
 - `ci-checks`
 - `docs-verification`
 - `workspace-review`
