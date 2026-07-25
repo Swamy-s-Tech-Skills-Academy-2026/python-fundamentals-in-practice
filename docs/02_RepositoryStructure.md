@@ -126,12 +126,12 @@ python-fundamentals-in-practice/
 │   │   ├── workspace-review/
 │   │   │   └── SKILL.md
 │   │   └── README.md
-│   ├── .gitignore
 │   ├── README.md
 │   ├── package-lock.json
 │   └── package.json
 ├── docs/
 │   ├── images/
+│   │   ├── README.md
 │   │   └── S1/
 │   │       ├── Help_V1.PNG
 │   │       ├── Help_V2.PNG
@@ -202,9 +202,17 @@ python-fundamentals-in-practice/
 │   │   │   ├── 04_string_basics.py
 │   │   │   ├── 05_string_len.py
 │   │   │   ├── 06_string_methods.py
+│   │   │   ├── 07_string_replace.py
+│   │   │   ├── 08_string_case_methods.py
+│   │   │   ├── 09_string_strip_methods.py
+│   │   │   ├── 10_string_indexing_and_slicing.py
+│   │   │   ├── 11_string_format_method.py
+│   │   │   ├── 12_f_strings.py
 │   │   │   ├── 13_list_append_remove.py
 │   │   │   ├── 14_list_insert_pop.py
-│   │   │   └── 15_list_sort_reverse.py
+│   │   │   ├── 15_list_sort_reverse.py
+│   │   │   ├── 16_percent_formatting.py
+│   │   │   └── 17_string_compound_operators.py
 │   │   ├── S9/
 │   │   │   ├── 01_dict_basics.py
 │   │   │   ├── 02_dict_iteration.py
